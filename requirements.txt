@@ -1,0 +1,3 @@
+# 仅 Python 标准库即可运行；无必装依赖。
+# 可选：装了 PyYAML 后 config.yaml 解析更稳（不装也有内置解析器兜底）
+PyYAML

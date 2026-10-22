@@ -1,0 +1,370 @@
+{
+ "name": "丝柯克",
+ "modules": [
+  {
+   "name": "基础信息",
+   "components": [
+    {
+     "component_id": "role_base_info",
+     "data": {
+      "moduleName": "基础信息",
+      "layout_": "banner",
+      "name": "丝柯克",
+      "star": 5,
+      "role_attribute": "#5FACC1",
+      "avatar_pc": "https://act-upload.mihoyo.com/wiki-user-upload/2025/06/19/50494840/ad1ccbbf54bc056fec3fd18b46bcf70d_6487369100277186500.png",
+      "avatar_m": "https://act-upload.mihoyo.com/wiki-user-upload/2025/06/19/50494840/fc88c072b2170a2038c5d6d9233076ad_5333270525503091049.png",
+      "attr": [
+       {
+        "key": "生日",
+        "value": [
+         "11月5日"
+        ]
+       },
+       {
+        "key": "所属",
+        "value": [
+         "寰宇劫灭"
+        ]
+       },
+       {
+        "key": "定位",
+        "value": [
+         "冰元素输出角色"
+        ]
+       },
+       {
+        "key": "武器类型",
+        "value": [
+         "单手剑"
+        ]
+       },
+       {
+        "key": "命之座",
+        "value": [
+         "磷星座"
+        ]
+       },
+       {
+        "key": "称号",
+        "value": [
+         "虚渊暗星"
+        ]
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "角色突破",
+   "components": [
+    {
+     "component_id": "role_ascension",
+     "data": {
+      "list": [
+       {
+        "tab_name": "1级属性/突破所需材料",
+        "materials": [
+         {
+          "ep_id": 857,
+          "amount": 1,
+          "nickname": "哀叙冰玉碎屑",
+          "img": "https://uploadstatic.mihoyo.com/ys-obc/2020/07/01/80410800/0a92de5d758106eeee1244a242f35260_6837674332923139510.png",
+          "link": "/ys/obc/content/857/detail?bbs_presentation_style=no_header",
+          "status": "Online"
+         },
+         {
+          "ep_id": 858,
+          "amount": 9,
+          "nickname": "哀叙冰玉断片",
+          "img": "https://uploadstatic.mihoyo.com/ys-obc/2020/07/01/80410800/5e8bc93c3fb60d77b6363292f98cbb84_8442728250190718596.png",
+          "link": "/ys/obc/content/858/detail?bbs_presentation_style=no_header",
+          "status": "Online"
+         },
+         {
+          "ep_id": 859,
+          "amount": 9,
+          "nickname": "哀叙冰玉块",
+          "img": "https://uploadstatic.mihoyo.com/ys-obc/2020/07/01/80410800/ef525d6cf66f77879e62bc012236e85c_4929556989859968422.png",
+          "link": "/ys/obc/content/859/detail?bbs_presentation_style=no_header",
+          "status": "Online"
+         },
+         {
+          "ep_id": 860,
+          "amount": 6,
+          "nickname": "哀叙冰玉",
+          "img": "https://uploadstatic.mihoyo.com/ys-obc/2020/07/01/80410800/aa59a39530f08fa3193140d42b83d38e_7862658183244704613.png",
+          "link": "/ys/obc/content/860/detail?bbs_presentation_style=no_header",
+          "status": "Online"
+         },
+         {
+          "ep_id": 503384,
+          "amount": 46,
+          "nickname": "深邃纠缠的凝视",
+          "img": "https://act-upload.mihoyo.com/wiki-user-upload/2024/11/19/4820086/b2624342bbc88dc610b512e7c5eff98a_884368637722835494.png",
+          "link": "/ys/obc/content/503384/detail?bbs_presentation_style=no_header",
+          "status": "Online"
+         },
+         {
+          "ep_id": 504731,
+          "amount": 168,
+          "nickname": "云岩裂叶",
+          "img": "https://act-upload.mihoyo.com/wiki-user-upload/2025/03/25/183046623/9d7426fc2a9aec8d08b85e806ab6238d_7118996535816723270.png",
+          "link": "/ys/obc/content/504731/detail?bbs_presentation_style=no_header",
+          "status": "Online"
+         },
+         {
+          "ep_id": 6997,
+          "amount": 18,
+          "nickname": "啮合齿轮",
+          "img": "https://act-upload.mihoyo.com/ys-obc/2023/08/15/183046623/de683d7416e336a95cd79c7587daa1ca_6124052682981810043.png",
+          "link": "/ys/obc/content/6997/detail?bbs_presentation_style=no_header",
+          "status": "Online"
+         },
+         {
+          "ep_id": 6998,
+          "amount": 30,
+          "nickname": "机关正齿轮",
+          "img": "https://act-upload.mihoyo.com/ys-obc/2023/08/15/183046623/2a297cb941d5b8c394cce6b48cd3bd56_7220690211277278115.png",
+          "link": "/ys/obc/content/6998/detail?bbs_presentation_style=no_header",
+          "status": "Online"
+         },
+         {
+          "ep_id": 6999,
+          "amount": 36,
+          "nickname": "奇械机芯齿轮",
+          "img": "https://act-upload.mihoyo.com/ys-obc/2023/08/15/183046623/40dfafea3ee4d7d84d023d2cca1dd95a_936363047459800625.png",
+          "link": "/ys/obc/content/6999/detail?bbs_presentation_style=no_header",
+          "status": "Online"
+         },
+         {
+          "ep_id": 5565,
+          "amount": 2092530,
+          "nickname": "摩拉",
+          "img": "https://uploadstatic.mihoyo.com/ys-obc/2022/12/08/160182379/605f7e564ce17decc9e09508567776ce_5737054899684571258.jpg",
+          "link": "/ys/obc/content/5565/detail?bbs_presentation_style=no_header",
+          "status": "Online"
+         }
+        ],
+        "new_talent_unlocked": "<p></p>",
+        "attr": [
+         {
+          "key": "攻击方式",
+          "value": [
+           "<p><span style=\"color: rgb(51, 51, 51)\">近战</span></p>"
+          ]
+         },
+         {
+          "key": "暴击率",
+          "value": [
+           "<p><span style=\"color: rgb(51, 51, 51)\">5.0%</span></p>"
+          ]
+         },
+         {
+          "key": "生命值",
+          "value": [
+           "<p>967</p>"
+          ]
+         },
+         {
+          "key": "暴击伤害",
+          "value": [
+           "<p><span style=\"color: rgb(51, 51, 51)\">50.0%</span></p>"
+          ]
+         },
+         {
+          "key": "攻击力",
+          "value": [
+           "<p><span style=\"color: rgb(51, 51, 51)\">51（28无武器）</span></p>"
+          ]
+         },
+         {
+          "key": "治疗加成",
+          "value": [
+           "<p><span style=\"color: rgb(51, 51, 51)\">0.0%</span></p>"
+          ]
+         },
+         {
+          "key": "防御力",
+          "value": [
+           "<p>63</p>"
+          ]
+         },
+         {
+          "key": "受治疗加成",
+          "value": [
+           "<p><span style=\"color: rgb(51, 51, 51)\">0.0%</span></p>"
+          ]
+         },
+         {
+          "key": "元素精通",
+          "value": [
+           "<p>0</p>"
+          ]
+         },
+         {
+          "key": "元素充能",
+          "value": [
+           "<p><span style=\"color: rgb(51, 51, 51)\">100.0%</span></p>"
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "天赋",
+   "components": [
+    {
+     "component_id": "role_talent",
+     "data": {
+      "list": [
+       {
+        "tab_name": "天赋1（普通攻击）",
+        "icon": "https://act-upload.mihoyo.com/wiki-user-upload/2025/06/11/50494840/cef547080617ba92b098a76307e2471b_816477145096267596.png",
+        "title": "极恶技·断",
+        "desc": "<p><span style=\"color: rgb(212, 177, 6)\">普通攻击</span></p><p>进行至多五段的连续攻击。</p><p></p><p><span style=\"color: rgb(212, 177, 6)\">重击</span></p><p>消耗一定体力，掷出回旋的晶枪，对前方的敌人造成伤害。</p><p></p><p><span style=\"color: rgb(212, 177, 6)\">下落攻击</span></p><p>从空中下坠冲击地面，攻击下落路径上的敌人，并在落地时造成范围伤害。</p>",
+        "attr": {
+         "tab_name": "",
+         "header": [
+          "详细属性",
+          "LV1",
+          "LV2",
+          "LV3",
+          "LV4",
+          "LV5",
+          "LV6",
+          "LV7",
+          "LV8",
+          "LV9",
+          "LV10",
+          "LV11"
+         ],
+         "row": [
+          [
+           "<p><span style=\"color: rgb(51, 51, 51)\">一段伤害</span></p>",
+           "<p>54.5%</p>",
+           "<p>59.0%</p>",
+           "<p>63.4%</p>",
+           "<p>69.7%</p>",
+           "<p>74.2%</p>",
+           "<p>79.3%</p>",
+           "<p>86.2%</p>",
+           "<p>93.2%</p>",
+           "<p>100.2%</p>",
+           "<p>107.8%</p>",
+           "<p>115.4%</p>"
+          ],
+          [
+           "<p><span style=\"color: rgb(51, 51, 51)\">二段伤害</span></p>",
+           "<p>49.8%</p>",
+           "<p>53.8%</p>",
+           "<p>57.9%</p>",
+           "<p>63.7%</p>",
+           "<p>67.7%</p>",
+           "<p>72.4%</p>",
+           "<p>78.7%</p>",
+           "<p>85.1%</p>",
+           "<p>91.5%</p>",
+           "<p>98.4%</p>",
+           "<p>105.4%</p>"
+          ]
+         ]
+        }
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "命之座",
+   "components": [
+    {
+     "component_id": "multi_table",
+     "data": {
+      "tables": [
+       {
+        "tab_name": "命之座",
+        "header": [
+         ""
+        ],
+        "row": [
+         [
+          "<html><head></head><body><p><span class=\"custom-image-view\" data-image-url=\"https://act-upload.mihoyo.com/wiki-user-upload/2025/06/07/50494840/08e0deebe996867ac1ba490281f74f41_5350886119031167269.png\" data-image-unit=\"px\" data-image-width=\"40\"><span class=\"custom-image-wrapper\" style=\"width: 40px;\"><span style=\"\"><img class=\"custom-image\" src=\"https://act-upload.mihoyo.com/wiki-user-upload/2025/06/07/50494840/08e0deebe996867ac1ba490281f74f41_5350886119031167269.png\" style=\"width: 40px;\"/></span></span></span>湮远</p><p>固有天赋<span style=\"color: rgb(212, 177, 6)\"><u>理外之理</u></span><span data-type=\"详情\" data-name=\"&lt;p&gt;队伍中附近的角色对敌人触发冻结、超导、星超导、冰元素扩散或冰元素结晶反应时，将在敌人附近创造一枚虚境裂隙。该效果每2.5秒至多触发一次，场上至多存在3枚丝柯克自己创造的虚境裂隙。&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;丝柯克可以通过以下方式，汲取附近一定范围内的虚境裂隙：&lt;/p&gt;&lt;p&gt;·在&lt;span style=&#34;color: rgb(212, 177, 6)&#34;&gt;七相一闪&lt;/span&gt;模式下进行的重击命中敌人时；&lt;/p&gt;&lt;p&gt;·施放七相一闪模式下的特殊元素爆发&lt;span style=&#34;color: rgb(212, 177, 6)&#34;&gt;极恶技·尽&lt;/span&gt;时；&lt;/p&gt;&lt;p&gt;·长按施放元素战技&lt;span style=&#34;color: rgb(212, 177, 6)&#34;&gt;极恶技·闪&lt;/span&gt;进行快速移动时。&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;每汲取一枚虚境裂隙，丝柯克将获得8点&lt;span style=&#34;color: rgb(212, 177, 6)&#34;&gt;蛇之狡谋&lt;/span&gt;。&lt;/p&gt;\" class=\"wiki-note-text\"><sup class=\"wiki-sup\">[详情]</sup></span>的效果获得强化：每汲取一枚虚境裂隙，就将召唤一枚晶刃攻击附近的敌人，造成相当于丝柯克攻击力500%的<span style=\"color: rgb(145, 213, 255)\">冰元素伤害</span>，该伤害视为重击伤害。</p><p>需要解锁固有天赋「理外之理」。</p><hr/><p><span class=\"custom-image-view\" data-image-url=\"https://act-upload.mihoyo.com/wiki-user-upload/2025/06/07/50494840/5eb8bbb67416c2aba6911298af86715f_4404961940583197962.png\" data-image-unit=\"px\" data-image-width=\"40\"><span class=\"custom-image-wrapper\" style=\"width: 40px;\"><span style=\"\"><img class=\"custom-image\" src=\"https://act-upload.mihoyo.com/wiki-user-upload/2025/06/07/50494840/5eb8bbb67416c2aba6911298af86715f_4404961940583197962.png\" style=\"width: 40px;\"/></span></span></span>坠渊</p><p>施放元素战技<span style=\"color: rgb(212, 177, 6)\">极恶技·闪</span>后，丝柯克将额外获得10点<span style=\"color: rgb(212, 177, 6)\"><u>蛇之狡谋</u></span><span data-type=\"详情\" data-name=\"&lt;p&gt;丝柯克可以消耗蛇之狡谋，以维持七相一闪模式，或是施放元素爆发极恶技·灭。&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;丝柯克可以通过以下方式获得蛇之狡谋：&lt;/p&gt;&lt;p&gt;·施放元素战技极恶技·闪后；&lt;/p&gt;&lt;p&gt;·触发突破天赋理外之理中汲取虚境裂隙的效果后。&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;丝柯克在七相一闪模式下退场时，或七相一闪模式结束时，将移除丝柯克持有的蛇之狡谋。&lt;/p&gt;\" class=\"wiki-note-text\"><sup class=\"wiki-sup\">[详情]</sup></span>。</p><p>施放元素爆发<span style=\"color: rgb(212, 177, 6)\">极恶技·灭</span>时，提升本次元素爆发伤害的效果，至多额外计入10点蛇之狡谋。</p><p>此外，丝柯克施放七相一闪模式下的特殊元素爆发<span style=\"color: rgb(212, 177, 6)\">极恶技·尽</span>后的12.5秒内，攻击力提升70%，该效果会在丝柯克退出<span style=\"color: rgb(212, 177, 6)\"><u>七相一闪</u></span><span data-type=\"详情\" data-name=\"&lt;p&gt;施放元素战技&lt;span style=&#34;color: rgb(212, 177, 6)&#34;&gt;极恶技·闪&lt;/span&gt;时，丝柯克将在一段时间内切换至该模式，并具有如下特性：&lt;/p&gt;&lt;p&gt;·持续消耗蛇之狡谋；&lt;/p&gt;&lt;p&gt;·提升普通攻击与重击的攻击范围，以及丝柯克的抗打断能力；&lt;/p&gt;&lt;p&gt;·进行普通攻击、重击和下落攻击时，将转为造成无法被附魔覆盖的&lt;span style=&#34;color: rgb(145, 213, 255)&#34;&gt;冰元素伤害&lt;/span&gt;；&lt;/p&gt;&lt;p&gt;·元素爆发&lt;span style=&#34;color: rgb(212, 177, 6)&#34;&gt;极恶技·灭&lt;/span&gt;将会被替换为特殊的元素爆发&lt;span style=&#34;color: rgb(212, 177, 6)&#34;&gt;极恶技·尽&lt;/span&gt;；&lt;/p&gt;&lt;p&gt;·丝柯克进行冲刺时，能够在水面上移动；&lt;/p&gt;&lt;p&gt;·蛇之狡谋耗尽时，或持续时间结束时，丝柯克将退出该模式，并使元素战技进入冷却。&lt;/p&gt;\" class=\"wiki-note-text\"><sup class=\"wiki-sup\">[详情]</sup></span>模式时解除。</p><hr/><p><span class=\"custom-image-view\" data-image-url=\"https://act-upload.mihoyo.com/wiki-user-upload/2025/06/11/50494840/ecababc492db6695169cc300bf7f08bd_4037147842344028798.png\" data-image-unit=\"px\" data-image-width=\"40\"><span class=\"custom-image-wrapper\" style=\"width: 40px;\"><span style=\"\"><img class=\"custom-image\" src=\"https://act-upload.mihoyo.com/wiki-user-upload/2025/06/11/50494840/ecababc492db6695169cc300bf7f08bd_4037147842344028798.png\" style=\"width: 40px;\"/></span></span></span>罪缘</p><p>元素爆发<span style=\"color: rgb(212, 177, 6)\"><u>极恶技·灭</u></span><span data-type=\"详情\" data-name=\"&lt;p&gt;丝柯克的元素爆发不依靠元素能量，而是依靠&lt;span style=&#34;color: rgb(212, 177, 6)&#34;&gt;蛇之狡谋&lt;/span&gt;。&lt;/p&gt;&lt;p&gt;当丝柯克拥有至少50点蛇之狡谋时，丝柯克可以消耗所有蛇之狡谋，施放元素爆发，撕裂前方的空间并进行高速的连续斩击，造成&lt;span style=&#34;color: rgb(145, 213, 255)&#34;&gt;冰元素范围伤害&lt;/span&gt;。同时，依据施放时丝柯克拥有的蛇之狡谋超过50点的部分，每1点蛇之狡谋都将提升本次元素爆发造成的伤害，至多通过这种方式计入12点蛇之狡谋。&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;丝柯克处于&lt;span style=&#34;color: rgb(212, 177, 6)&#34;&gt;七相一闪&lt;/span&gt;模式下时，元素爆发「极恶技·灭」将会被替换为「极恶技·尽」。&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&#34;color: rgb(212, 177, 6)&#34;&gt;极恶技·尽&lt;/span&gt;&lt;/p&gt;&lt;p&gt;无需消耗蛇之狡谋即可施放的特殊元素爆发。&lt;/p&gt;&lt;p&gt;施放后，丝柯克将获得凋尽效果，效果持续至七相一闪模式结束；解锁突破天赋&lt;span style=&#34;color: rgb(212, 177, 6)&#34;&gt;理外之理&lt;/span&gt;后，丝柯克还将汲取附近一定范围内的虚境裂隙。&lt;/p&gt;&lt;p&gt;凋尽效果持续期间，每0.1秒，丝柯克的普通攻击命中敌人后，将使本次普通攻击造成的伤害提高；若施放&lt;span style=&#34;color: rgb(212, 177, 6)&#34;&gt;极恶技·尽&lt;/span&gt;时，汲取了虚境裂隙，则会依据汲取的虚境裂隙枚数，使本次普通攻击造成的伤害进一步提高。&lt;/p&gt;&lt;p&gt;该效果将在触发次数达到10次时解除。&lt;/p&gt;\" class=\"wiki-note-text\"><sup class=\"wiki-sup\">[详情]</sup></span>的技能等级提高3级。</p><p>至多提升至15级。</p><hr/><p><span class=\"custom-image-view\" data-image-url=\"https://act-upload.mihoyo.com/wiki-user-upload/2025/06/07/50494840/75ca8addc6107edb7851b29d84ef2f5c_3372637601526717332.png\" data-image-unit=\"px\" data-image-width=\"40\"><span class=\"custom-image-wrapper\" style=\"width: 40px;\"><span style=\"\"><img class=\"custom-image\" src=\"https://act-upload.mihoyo.com/wiki-user-upload/2025/06/07/50494840/75ca8addc6107edb7851b29d84ef2f5c_3372637601526717332.png\" style=\"width: 40px;\"/></span></span></span>流断</p><p>固有天赋<span style=\"color: rgb(212, 177, 6)\"><u>万流归寂</u></span><span data-type=\"详情\" data-name=\"&lt;p&gt;队伍中附近的元素类型为&lt;span style=&#34;color: rgb(24, 144, 255)&#34;&gt;水元素&lt;/span&gt;的角色的&lt;span style=&#34;color: rgb(24, 144, 255)&#34;&gt;水元素&lt;/span&gt;攻击命中敌人时，或是队伍中附近的元素类型为&lt;span style=&#34;color: rgb(145, 213, 255)&#34;&gt;冰元素&lt;/span&gt;的其他角色的&lt;span style=&#34;color: rgb(145, 213, 255)&#34;&gt;冰元素&lt;/span&gt;攻击命中敌人时，丝柯克将获得一层持续20秒的死河渡断效果，至多叠加3层，每层独立计算持续时间。&lt;/p&gt;&lt;p&gt;每名角色至多通过这种方式使丝柯克获得1层死河渡断效果。&lt;/p&gt;&lt;p&gt;每层死河渡断效果会使丝柯克在&lt;span style=&#34;color: rgb(212, 177, 6)&#34;&gt;七相一闪&lt;/span&gt;模式下时进行的普通攻击造成原本110%/120%/170%的伤害，且施放的元素爆发&lt;span style=&#34;color: rgb(212, 177, 6)&#34;&gt;极恶技·灭&lt;/span&gt;造成原本105%/115%/160%的伤害。&lt;/p&gt;\" class=\"wiki-note-text\"><sup class=\"wiki-sup\">[详情]</sup></span>的效果获得强化：每层死河渡断效果还会使丝柯克的攻击力提升10%/20%/40%。</p><p>需要解锁固有天赋「万流归寂」。</p><hr/><p><span class=\"custom-image-view\" data-image-url=\"https://act-upload.mihoyo.com/wiki-user-upload/2025/06/11/50494840/486c2705f8de54be2126777b45aa0bcd_96843986351639778.png\" data-image-unit=\"px\" data-image-width=\"40\"><span class=\"custom-image-wrapper\" style=\"width: 40px;\"><span style=\"\"><img class=\"custom-image\" src=\"https://act-upload.mihoyo.com/wiki-user-upload/2025/06/11/50494840/486c2705f8de54be2126777b45aa0bcd_96843986351639778.png\" style=\"width: 40px;\"/></span></span></span>结愿</p><p>元素战技<span style=\"color: rgb(212, 177, 6)\"><u>极恶技·闪</u></span><span data-type=\"详情\" data-name=\"&lt;p&gt;仿拟极恶骑的战斗风格，依据点按、长按，以不同的方式产生效果。&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&#34;color: rgb(212, 177, 6)&#34;&gt;点按&lt;/span&gt;&lt;/p&gt;&lt;p&gt;丝柯克获得45点&lt;span style=&#34;color: rgb(212, 177, 6)&#34;&gt;蛇之狡谋&lt;/span&gt;，并切换至&lt;span style=&#34;color: rgb(212, 177, 6)&#34;&gt;七相一闪&lt;/span&gt;模式。&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&#34;color: rgb(212, 177, 6)&#34;&gt;长按&lt;/span&gt;&lt;/p&gt;&lt;p&gt;丝柯克获得45点蛇之狡谋，并将持续快速移动，在该状态下提高丝柯克的抗打断能力。&lt;/p&gt;&lt;p&gt;期间，丝柯克可以控制快速移动的方向，且可以在水面上移动，并能通过再次施放技能，提前结束快速移动状态。&lt;/p&gt;\" class=\"wiki-note-text\"><sup class=\"wiki-sup\">[详情]</sup></span>的技能等级提高3级。</p><p>至多提升至15级。</p><hr/><p><span class=\"custom-image-view\" data-image-url=\"https://act-upload.mihoyo.com/wiki-user-upload/2025/06/11/50494840/8b28b2d484769b81cecc5c58475dba2a_4346582609878324126.png\" data-image-unit=\"px\" data-image-width=\"40\"><span class=\"custom-image-wrapper\" style=\"width: 40px;\"><span style=\"\"><img class=\"custom-image\" src=\"https://act-upload.mihoyo.com/wiki-user-upload/2025/06/11/50494840/8b28b2d484769b81cecc5c58475dba2a_4346582609878324126.png\" style=\"width: 40px;\"/></span></span></span>至源</p><p>丝柯克每通过固有天赋<span style=\"color: rgb(212, 177, 6)\"><u>理外之理</u></span><span data-type=\"详情\" data-name=\"&lt;p&gt;队伍中附近的角色对敌人触发冻结、超导、星超导、冰元素扩散或冰元素结晶反应时，将在敌人附近创造一枚虚境裂隙。该效果每2.5秒至多触发一次，场上至多存在3枚丝柯克自己创造的虚境裂隙。&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;丝柯克可以通过以下方式，汲取附近一定范围内的虚境裂隙：&lt;/p&gt;&lt;p&gt;·在&lt;span style=&#34;color: rgb(212, 177, 6)&#34;&gt;七相一闪&lt;/span&gt;模式下进行的重击命中敌人时；&lt;/p&gt;&lt;p&gt;·施放七相一闪模式下的特殊元素爆发&lt;span style=&#34;color: rgb(212, 177, 6)&#34;&gt;极恶技·尽&lt;/span&gt;时；&lt;/p&gt;&lt;p&gt;·长按施放元素战技&lt;span style=&#34;color: rgb(212, 177, 6)&#34;&gt;极恶技·闪&lt;/span&gt;进行快速移动时。&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;每汲取一枚虚境裂隙，丝柯克将获得8点&lt;span style=&#34;color: rgb(212, 177, 6)&#34;&gt;蛇之狡谋&lt;/span&gt;。&lt;/p&gt;\" class=\"wiki-note-text\"><sup class=\"wiki-sup\">[详情]</sup></span>的效果汲取一枚虚境裂隙，就会获得一层极恶技·斩效果，丝柯克可以消耗该效果进行协同攻击，并降低在<span style=\"color: rgb(212, 177, 6)\"><u>七相一闪</u></span><span data-type=\"详情\" data-name=\"&lt;p&gt;施放元素战技&lt;span style=&#34;color: rgb(212, 177, 6)&#34;&gt;极恶技·闪&lt;/span&gt;时，丝柯克将在一段时间内切换至该模式，并具有如下特性：&lt;/p&gt;&lt;p&gt;·持续消耗蛇之狡谋；&lt;/p&gt;&lt;p&gt;·提升普通攻击与重击的攻击范围，以及丝柯克的抗打断能力；&lt;/p&gt;&lt;p&gt;·进行普通攻击、重击和下落攻击时，将转为造成无法被附魔覆盖的&lt;span style=&#34;color: rgb(145, 213, 255)&#34;&gt;冰元素伤害&lt;/span&gt;；&lt;/p&gt;&lt;p&gt;·元素爆发&lt;span style=&#34;color: rgb(212, 177, 6)&#34;&gt;极恶技·灭&lt;/span&gt;将会被替换为特殊的元素爆发&lt;span style=&#34;color: rgb(212, 177, 6)&#34;&gt;极恶技·尽&lt;/span&gt;；&lt;/p&gt;&lt;p&gt;·丝柯克进行冲刺时，能够在水面上移动；&lt;/p&gt;&lt;p&gt;·蛇之狡谋耗尽时，或持续时间结束时，丝柯克将退出该模式，并使元素战技进入冷却。&lt;/p&gt;\" class=\"wiki-note-text\"><sup class=\"wiki-sup\">[详情]</sup></span>模式下受到的伤害，该效果持续15秒，至多叠加3层，每层独立计算持续时间。</p><p>需要解锁固有天赋「理外之理」。</p><p></p><p><span style=\"color: rgb(212, 177, 6)\">极恶技·斩</span></p><p>·施放元素爆发<span style=\"color: rgb(212, 177, 6)\">极恶技·灭</span>时，将消耗所有的极恶技·斩层数进行协同攻击，每层<span style=\"color: rgb(212, 177, 6)\">极恶技·斩</span>会造成相当于丝柯克攻击力750%的<span style=\"color: rgb(145, 213, 255)\">冰元素伤害</span>，该伤害视为元素爆发伤害；</p><p>·丝柯克在七相一闪模式下进行的普通攻击，第三段攻击或第五段攻击命中敌人时，将消耗一层极恶技·斩，进行3次协同攻击，每次协同攻击造成相当于丝柯克攻击力180%的<span style=\"color: rgb(145, 213, 255)\">冰元素伤害</span>，该伤害视为普通攻击伤害；</p><p>·丝柯克在七相一闪模式下受到伤害时，将消耗一层极恶技·斩，使本次受到的伤害降低80%，并对附近的敌人进行3次攻击，每次攻击造成相当于丝柯克攻击力180%的<span style=\"color: rgb(145, 213, 255)\">冰元素伤害</span>，该伤害视为重击伤害。</p></body></html>"
+         ]
+        ]
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "角色CV",
+   "components": [
+    {
+     "component_id": "collapse_panel",
+     "data": {
+      "rich_text": "<p>中：谢莹</p><p>日：能登麻美子</p><p>英：Cat Protano（卡特·普罗塔诺）</p><p>韩：서다혜（徐多慧）</p><p>四国语音展示请下划浏览</p>",
+      "switch": false,
+      "is_show_switch": false,
+      "without_border": false
+     }
+    }
+   ]
+  },
+  {
+   "name": "配音展示",
+   "components": [
+    {
+     "component_id": "role_voice",
+     "data": {
+      "moduleName": "配音展示",
+      "layout_": "banner",
+      "list": [
+       {
+        "tab_name": "汉语",
+        "table": [
+         {
+          "name": "初次见面…",
+          "content": "我是丝柯克，「极恶骑」苏尔特洛奇的弟子。过往的旅程中，你已证明自己是一位合格的强者，拥有和我平等对话的资格。就让我来见证你的命运吧。",
+          "audio_url": "https://act-upload.mihoyo.com/wiki-user-upload/2025/06/22/16576950/ec65671caa24dffa3d2d1dd321a413a8_182806431000888695.mp3",
+          "isUploading": false,
+          "audio_name": "01初次见面…_cn.mp3"
+         },
+         {
+          "name": "闲聊·深渊",
+          "content": "深渊就像世界的影子。它一直在那里，永远不凋亡。",
+          "audio_url": "https://act-upload.mihoyo.com/wiki-user-upload/2025/06/22/16576950/bfc8c5e0fcb71f3e1690c70904d1135b_2103524232163329470.mp3",
+          "isUploading": false,
+          "audio_name": "02闲聊·深渊_cn.mp3"
+         }
+        ],
+        "tab_id": "1694069109341_0"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "角色故事1",
+   "components": [
+    {
+     "component_id": "collapse_panel",
+     "data": {
+      "rich_text": "<p>「走吧。她已经活不成了。」</p><p>「可是，我们的任务是…」</p><p>年幼的孩子捂着流血的断臂，看着眼前模糊的两个人影。</p><p>最后只看到其中看起来地位更高的人伸手止住了另一人的发言，随后两人便转身消失了。</p><p></p><p>她的族人不久前才知道宇宙间竟然有这么多的文明。以前只有少数几个老爷爷模样的学者有机会和天外之人接触。</p><p>明明几个月前族长宣布了良好的贸易关系，为什么现在…</p><p>大火烧断了房梁，在那之前女孩就因为失血、高温与烟气窒息了。</p><p></p><p>当压埋于头顶的瓦砾与焦木被掀开的时候，她听到了「吱吱」叫唤的声音。</p><p>她的眼睑已经被血水黏住，无法睁开。但是她明显感知到有光透了过来。</p><p>随后是脚步声，踩在焦土上，每一步都踏碎了脚下的破碎砖石。</p><p>来人随意地扯松了一些困住小女孩的结构，然后巨大的手捏住了她的肩膀，把她扯了出来。</p><p>这一下几乎扯断她的四肢，疼痛让她眼睛渗出了眼泪，渐渐融开了凝固的血。</p><p>她自己都惊讶这个时候自己体内还有多余水分。</p><p>但是这种感觉也就只有一瞬间，她立刻因为疼痛再度晕厥。</p><p></p><p>第二次醒转时，她又不得不感叹，自己居然还有再睁开眼的时候。模糊的视野里，一个高大的男人生起了一团篝火，正在火前面盘腿而坐。一只巨大的老鼠模样的生物正畏惧地瑟缩在一边，黑色眼球里映出腾跃的火光。</p><p>「醒了吗？别问那些对活下去不重要的问题。浪费你自己的时间。」</p><p>男人头也没回，只是继续用一把剑拨动篝火。</p><p>「想死还是想活？」</p><p>虽然她很想问，自己为什么还活着？男人又是谁？但是之前就已经有过了警告，当前不应该问不重要的问题。</p><p>女孩子只是回正脑袋，看着灿烂的星空，点了点头。</p><p>男人听到，只是随手一剑，杀掉了一旁的大老鼠。然后割下腿上的肉，串在剑上烤了起来。最后他难得站起身来，把肉塞进女孩的嘴里。虽然没有任何调味，但脂肪的香味此刻格外勾人。</p><p></p><p>好吧，至少此刻男人没要求让她自己动手吃。看起来他还知道女孩的四肢已经全部报废了。</p>",
+      "switch": false,
+      "is_show_switch": true,
+      "without_border": false
+     }
+    }
+   ]
+  }
+ ]
+}

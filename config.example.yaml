@@ -1,0 +1,32 @@
+# config.example.yaml —— 默认配置模板
+# 复制本文件为 config.yaml 并按需修改；本文件提交到仓库，不含任何真实凭据
+
+# 抓哪几类图鉴（键名写分类名、英文键或简称都认；不写本段 = 全抓）
+catalogs:
+  角色图鉴: true
+  武器图鉴: true
+  圣遗物图鉴: true
+
+# 输出目录，相对路径以项目根目录为基准
+output_dir: output
+
+# 是否下载词条封面到 assets/
+download_images: true
+
+# 每个分类最多导出几条，0 = 不限
+limit: 0
+
+request:
+  timeout: 30          # 单请求超时（秒）
+  retries: 2           # 网络异常重试次数
+  delay: 0.1           # 请求间隔（秒），对接口友好
+  proxy: ""            # 代理地址（如 http://127.0.0.1:7890）；留空 = 绕过系统代理直连
+
+cache:
+  enabled: true        # 分类列表与词条正文本地缓存，中断后重跑续着补
+  dir: .cache
+  ttl_hours: 24        # 缓存有效期（小时），0 = 永不过期
+
+logging:
+  verbose: false       # 打印每次请求明细
+  progress: true       # 抓取时显示进度条（非终端自动降级为文字进度）

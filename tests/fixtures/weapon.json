@@ -1,0 +1,470 @@
+{
+ "name": "苍耀",
+ "modules": [
+  {
+   "name": "合并",
+   "components": [
+    {
+     "name": "",
+     "component_id": "equipment_base_info",
+     "data": {
+      "name": "苍耀",
+      "image": "https://act-upload.mihoyo.com/wiki-user-upload/2025/06/16/75833613/d42984d1b4de877fe48bc536bf786d56_5323897713058465532.jpg",
+      "category": "单手剑",
+      "star": 5
+     }
+    },
+    {
+     "name": "装备描述",
+     "component_id": "good_desc",
+     "data": {
+      "rich_text": "<p><span style=\"color: rgb(172, 133, 86)\">精炼(1/2/3/4/5)阶</span></p><p><strong>白山的馈赐<br> · 施放元素战技后的12秒内，攻击力提升(<span style=\"color: rgb(0, 151, 225)\">24%/30%/36%/42%/48%</span>)。持续期间，装备者的元素能量为0时，攻击力还会提升(<span style=\"color: rgb(0, 151, 225)\">24%/30%/36%/42%/48%</span>)，且暴击伤害提升(<span style=\"color: rgb(0, 151, 225)\">40%/50%/60%/70%/80%</span>)。</strong></p><hr><p>原本如同拂晓的白星般纯净的无垢之刃，如今已被染上幽蓝的黯色。</p>",
+      "attr": [
+       {
+        "key": "冒险等阶限制：",
+        "value": [
+         "<p>无</p>"
+        ]
+       },
+       {
+        "key": "获取途径：",
+        "value": [
+         "<p>限时祈愿</p>"
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "name": "成长数值",
+     "component_id": "equipment_growth_info",
+     "data": {
+      "list": [
+       {
+        "tab_name": "1级",
+        "attr": [
+         {
+          "key": "初始基础数值：",
+          "value": [
+           "<p>基础攻击力: 48</p><p>暴击率: 4.8%</p>"
+          ]
+         },
+         {
+          "key": "平均每级提升：",
+          "value": [
+           "<p>基础攻击力: +4.47</p><p>暴击率: +0.19%</p>"
+          ]
+         }
+        ],
+        "materials": [
+         {
+          "link": "/ys/obc/content/501905/detail?bbs_presentation_style=no_header",
+          "updated": false,
+          "status": "Online",
+          "ep_id": 501905,
+          "img": "https://act-upload.mihoyo.com/wiki-user-upload/2024/08/23/288180982/58fcb8f88d235f1f188dde24c1a50f9d_6502700643634906560.png",
+          "nickname": "神合秘烟的思绪",
+          "amount": 5
+         },
+         {
+          "link": "/ys/obc/content/501908/detail?bbs_presentation_style=no_header",
+          "updated": false,
+          "status": "Online",
+          "ep_id": 501908,
+          "img": "https://act-upload.mihoyo.com/wiki-user-upload/2024/08/23/288180982/a48d7a047ff5e453557171cd78292d39_3200241519472015598.png",
+          "nickname": "神合秘烟的预感",
+          "amount": 14
+         },
+         {
+          "link": "/ys/obc/content/501906/detail?bbs_presentation_style=no_header",
+          "updated": false,
+          "status": "Online",
+          "ep_id": 501906,
+          "img": "https://act-upload.mihoyo.com/wiki-user-upload/2024/08/23/288180982/cb3b927694dd91f45a510d2d92a54ceb_7677342266545035492.png",
+          "nickname": "神合秘烟的征兆",
+          "amount": 14
+         },
+         {
+          "link": "/ys/obc/content/501907/detail?bbs_presentation_style=no_header",
+          "updated": false,
+          "status": "Online",
+          "ep_id": 501907,
+          "img": "https://act-upload.mihoyo.com/wiki-user-upload/2024/08/23/288180982/49db0551113b980c735c2082e8b0f086_4927741919306693608.png",
+          "nickname": "神合秘烟的启示",
+          "amount": 6
+         },
+         {
+          "link": "/ys/obc/content/503383/detail?bbs_presentation_style=no_header",
+          "updated": false,
+          "status": "Online",
+          "ep_id": 503383,
+          "img": "https://act-upload.mihoyo.com/wiki-user-upload/2024/11/19/4820086/4125dd0dd550b51e16237ee5d09881d9_5572302120456470270.png",
+          "nickname": "折光的胚芽",
+          "amount": 23
+         },
+         {
+          "link": "/ys/obc/content/503382/detail?bbs_presentation_style=no_header",
+          "updated": false,
+          "status": "Online",
+          "ep_id": 503382,
+          "img": "https://act-upload.mihoyo.com/wiki-user-upload/2024/11/19/4820086/7a8ba61a8ff7a50d304ca1ec39db7c00_4997860378015262360.png",
+          "nickname": "惑光的阔叶",
+          "amount": 27
+         },
+         {
+          "link": "/ys/obc/content/503385/detail?bbs_presentation_style=no_header",
+          "updated": false,
+          "status": "Online",
+          "ep_id": 503385,
+          "img": "https://act-upload.mihoyo.com/wiki-user-upload/2024/11/19/4820086/22f0d96390de4719a481906142398885_5122466620539373598.png",
+          "nickname": "迷光的蜷叶之心",
+          "amount": 41
+         },
+         {
+          "link": "/ys/obc/content/501915/detail?bbs_presentation_style=no_header",
+          "updated": false,
+          "status": "Online",
+          "ep_id": 501915,
+          "img": "https://act-upload.mihoyo.com/wiki-user-upload/2024/08/23/183046623/42e438aecc16def70807f17a711ffc70_2525276317694465439.png",
+          "nickname": "卫从的木哨",
+          "amount": 15
+         },
+         {
+          "link": "/ys/obc/content/501916/detail?bbs_presentation_style=no_header",
+          "updated": false,
+          "status": "Online",
+          "ep_id": 501916,
+          "img": "https://act-upload.mihoyo.com/wiki-user-upload/2024/08/23/183046623/e79a1c959654b4d4699f49358f985a55_8122714949225855876.png",
+          "nickname": "战士的铁哨",
+          "amount": 23
+         },
+         {
+          "link": "/ys/obc/content/501917/detail?bbs_presentation_style=no_header",
+          "updated": false,
+          "status": "Online",
+          "ep_id": 501917,
+          "img": "https://act-upload.mihoyo.com/wiki-user-upload/2024/08/23/183046623/e3d4e7dc5f98f2a3fb241a4497e03eee_6003530851398497054.png",
+          "nickname": "龙冠武士的金哨",
+          "amount": 27
+         },
+         {
+          "link": "/ys/obc/content/1030/detail?bbs_presentation_style=no_header",
+          "updated": false,
+          "status": "Online",
+          "ep_id": 1030,
+          "img": "https://uploadstatic.mihoyo.com/ys-obc/2020/07/21/15568211/2e39a9f5b912ec7717a4f77182e8605b_4227205780581648845.png",
+          "nickname": "精锻用魔矿",
+          "amount": 907
+         },
+         {
+          "link": "/ys/obc/content/5565/detail?bbs_presentation_style=no_header",
+          "updated": false,
+          "status": "",
+          "ep_id": 1030,
+          "img": "https://uploadstatic.mihoyo.com/ys-obc/2022/01/26/183046623/ba976c9d2e725a18873d91a2614558a4_853547209390897208.jpg",
+          "nickname": "摩拉",
+          "amount": 1131445
+         }
+        ]
+       },
+       {
+        "tab_name": "20级",
+        "attr": [
+         {
+          "key": "初始基础数值：",
+          "value": [
+           "<p>基础攻击力（未突破）: 133</p><p>基础攻击力（突破后）: 164</p><p>暴击率: 8.5%</p>"
+          ]
+         },
+         {
+          "key": "平均每级提升：",
+          "value": [
+           "<p>基础攻击力: +4.85</p><p>暴击率: +0.20%</p>"
+          ]
+         }
+        ],
+        "materials": [
+         {
+          "link": "/ys/obc/content/501905/detail?bbs_presentation_style=no_header",
+          "updated": false,
+          "status": "Online",
+          "ep_id": 501905,
+          "img": "https://act-upload.mihoyo.com/wiki-user-upload/2024/08/23/288180982/58fcb8f88d235f1f188dde24c1a50f9d_6502700643634906560.png",
+          "nickname": "神合秘烟的思绪",
+          "amount": 5
+         },
+         {
+          "link": "/ys/obc/content/503383/detail?bbs_presentation_style=no_header",
+          "updated": false,
+          "status": "Online",
+          "ep_id": 503383,
+          "img": "https://act-upload.mihoyo.com/wiki-user-upload/2024/11/19/4820086/4125dd0dd550b51e16237ee5d09881d9_5572302120456470270.png",
+          "nickname": "折光的胚芽",
+          "amount": 5
+         },
+         {
+          "link": "/ys/obc/content/501915/detail?bbs_presentation_style=no_header",
+          "updated": false,
+          "status": "Online",
+          "ep_id": 501915,
+          "img": "https://act-upload.mihoyo.com/wiki-user-upload/2024/08/23/183046623/42e438aecc16def70807f17a711ffc70_2525276317694465439.png",
+          "nickname": "卫从的木哨",
+          "amount": 3
+         }
+        ]
+       },
+       {
+        "tab_name": "40级",
+        "attr": [
+         {
+          "key": "初始基础数值：",
+          "value": [
+           "<p>基础攻击力（未突破）: 261</p><p>基础攻击力（突破后）: 292</p><p>暴击率: 12.4%</p>"
+          ]
+         },
+         {
+          "key": "平均每级提升：",
+          "value": [
+           "<p>基础攻击力: +4.90</p><p>暴击率: +0.19%</p>"
+          ]
+         }
+        ],
+        "materials": [
+         {
+          "link": "/ys/obc/content/501908/detail?bbs_presentation_style=no_header",
+          "updated": false,
+          "status": "Online",
+          "ep_id": 501908,
+          "img": "https://act-upload.mihoyo.com/wiki-user-upload/2024/08/23/288180982/a48d7a047ff5e453557171cd78292d39_3200241519472015598.png",
+          "nickname": "神合秘烟的预感",
+          "amount": 5
+         },
+         {
+          "link": "/ys/obc/content/503383/detail?bbs_presentation_style=no_header",
+          "updated": false,
+          "status": "Online",
+          "ep_id": 503383,
+          "img": "https://act-upload.mihoyo.com/wiki-user-upload/2024/11/19/4820086/4125dd0dd550b51e16237ee5d09881d9_5572302120456470270.png",
+          "nickname": "折光的胚芽",
+          "amount": 18
+         },
+         {
+          "link": "/ys/obc/content/501915/detail?bbs_presentation_style=no_header",
+          "updated": false,
+          "status": "Online",
+          "ep_id": 501915,
+          "img": "https://act-upload.mihoyo.com/wiki-user-upload/2024/08/23/183046623/42e438aecc16def70807f17a711ffc70_2525276317694465439.png",
+          "nickname": "卫从的木哨",
+          "amount": 12
+         }
+        ]
+       },
+       {
+        "tab_name": "50级",
+        "attr": [
+         {
+          "key": "初始基础数值：",
+          "value": [
+           "<p>基础攻击力（未突破）: 341</p><p>基础攻击力（突破后）: 373</p><p>暴击率: 14.3%</p>"
+          ]
+         },
+         {
+          "key": "平均每级提升：",
+          "value": [
+           "<p>基础攻击力: +5.00</p><p>暴击率: +0.19%</p>"
+          ]
+         }
+        ],
+        "materials": [
+         {
+          "link": "/ys/obc/content/501908/detail?bbs_presentation_style=no_header",
+          "updated": false,
+          "status": "Online",
+          "ep_id": 501908,
+          "img": "https://act-upload.mihoyo.com/wiki-user-upload/2024/08/23/288180982/a48d7a047ff5e453557171cd78292d39_3200241519472015598.png",
+          "nickname": "神合秘烟的预感",
+          "amount": 9
+         },
+         {
+          "link": "/ys/obc/content/503382/detail?bbs_presentation_style=no_header",
+          "updated": false,
+          "status": "Online",
+          "ep_id": 503382,
+          "img": "https://act-upload.mihoyo.com/wiki-user-upload/2024/11/19/4820086/7a8ba61a8ff7a50d304ca1ec39db7c00_4997860378015262360.png",
+          "nickname": "惑光的阔叶",
+          "amount": 9
+         },
+         {
+          "link": "/ys/obc/content/501916/detail?bbs_presentation_style=no_header",
+          "updated": false,
+          "status": "Online",
+          "ep_id": 501916,
+          "img": "https://act-upload.mihoyo.com/wiki-user-upload/2024/08/23/183046623/e79a1c959654b4d4699f49358f985a55_8122714949225855876.png",
+          "nickname": "战士的铁哨",
+          "amount": 9
+         }
+        ]
+       },
+       {
+        "tab_name": "60级",
+        "attr": [
+         {
+          "key": "初始基础数值：",
+          "value": [
+           "<p>基础攻击力（未突破）: 423</p><p>基础攻击力（突破后）: 455</p><p>暴击率: 16.2%</p>"
+          ]
+         },
+         {
+          "key": "平均每级提升：",
+          "value": [
+           "<p>基础攻击力: +5.10</p><p>暴击率: +0.20%</p>"
+          ]
+         }
+        ],
+        "materials": [
+         {
+          "link": "/ys/obc/content/501906/detail?bbs_presentation_style=no_header",
+          "updated": false,
+          "status": "Online",
+          "ep_id": 501906,
+          "img": "https://act-upload.mihoyo.com/wiki-user-upload/2024/08/23/288180982/cb3b927694dd91f45a510d2d92a54ceb_7677342266545035492.png",
+          "nickname": "神合秘烟的征兆",
+          "amount": 5
+         },
+         {
+          "link": "/ys/obc/content/503382/detail?bbs_presentation_style=no_header",
+          "updated": false,
+          "status": "Online",
+          "ep_id": 503382,
+          "img": "https://act-upload.mihoyo.com/wiki-user-upload/2024/11/19/4820086/7a8ba61a8ff7a50d304ca1ec39db7c00_4997860378015262360.png",
+          "nickname": "惑光的阔叶",
+          "amount": 18
+         },
+         {
+          "link": "/ys/obc/content/501916/detail?bbs_presentation_style=no_header",
+          "updated": false,
+          "status": "Online",
+          "ep_id": 501916,
+          "img": "https://act-upload.mihoyo.com/wiki-user-upload/2024/08/23/183046623/e79a1c959654b4d4699f49358f985a55_8122714949225855876.png",
+          "nickname": "战士的铁哨",
+          "amount": 14
+         }
+        ]
+       },
+       {
+        "tab_name": "70级",
+        "attr": [
+         {
+          "key": "初始基础数值：",
+          "value": [
+           "<p>基础攻击力（未突破）: 506</p><p>基础攻击力（突破后）: 537</p><p>暴击率: 18.2%</p>"
+          ]
+         },
+         {
+          "key": "平均每级提升：",
+          "value": [
+           "<p>基础攻击力: +5.30</p><p>暴击率: +0.19%</p>"
+          ]
+         }
+        ],
+        "materials": [
+         {
+          "link": "/ys/obc/content/501906/detail?bbs_presentation_style=no_header",
+          "updated": false,
+          "status": "Online",
+          "ep_id": 501906,
+          "img": "https://act-upload.mihoyo.com/wiki-user-upload/2024/08/23/288180982/cb3b927694dd91f45a510d2d92a54ceb_7677342266545035492.png",
+          "nickname": "神合秘烟的征兆",
+          "amount": 9
+         },
+         {
+          "link": "/ys/obc/content/503385/detail?bbs_presentation_style=no_header",
+          "updated": false,
+          "status": "Online",
+          "ep_id": 503385,
+          "img": "https://act-upload.mihoyo.com/wiki-user-upload/2024/11/19/4820086/22f0d96390de4719a481906142398885_5122466620539373598.png",
+          "nickname": "迷光的蜷叶之心",
+          "amount": 14
+         },
+         {
+          "link": "/ys/obc/content/501917/detail?bbs_presentation_style=no_header",
+          "updated": false,
+          "status": "Online",
+          "ep_id": 501917,
+          "img": "https://act-upload.mihoyo.com/wiki-user-upload/2024/08/23/183046623/e3d4e7dc5f98f2a3fb241a4497e03eee_6003530851398497054.png",
+          "nickname": "龙冠武士的金哨",
+          "amount": 9
+         }
+        ]
+       },
+       {
+        "tab_name": "80级",
+        "attr": [
+         {
+          "key": "初始基础数值：",
+          "value": [
+           "<p>基础攻击力（未突破）: 590</p><p>基础攻击力（突破后）: 621</p><p>暴击率: 20.1%</p>"
+          ]
+         },
+         {
+          "key": "平均每级提升：",
+          "value": [
+           "<p>基础攻击力: +5.30</p><p>暴击率: +0.20%</p>"
+          ]
+         }
+        ],
+        "materials": [
+         {
+          "link": "/ys/obc/content/501907/detail?bbs_presentation_style=no_header",
+          "updated": false,
+          "status": "Online",
+          "ep_id": 501907,
+          "img": "https://act-upload.mihoyo.com/wiki-user-upload/2024/08/23/288180982/49db0551113b980c735c2082e8b0f086_4927741919306693608.png",
+          "nickname": "神合秘烟的启示",
+          "amount": 6
+         },
+         {
+          "link": "/ys/obc/content/503385/detail?bbs_presentation_style=no_header",
+          "updated": false,
+          "status": "Online",
+          "ep_id": 503385,
+          "img": "https://act-upload.mihoyo.com/wiki-user-upload/2024/11/19/4820086/22f0d96390de4719a481906142398885_5122466620539373598.png",
+          "nickname": "迷光的蜷叶之心",
+          "amount": 27
+         },
+         {
+          "link": "/ys/obc/content/501917/detail?bbs_presentation_style=no_header",
+          "updated": false,
+          "status": "Online",
+          "ep_id": 501917,
+          "img": "https://act-upload.mihoyo.com/wiki-user-upload/2024/08/23/183046623/e3d4e7dc5f98f2a3fb241a4497e03eee_6003530851398497054.png",
+          "nickname": "龙冠武士的金哨",
+          "amount": 18
+         }
+        ]
+       },
+       {
+        "tab_name": "90级",
+        "attr": [
+         {
+          "key": "初始基础数值：",
+          "value": [
+           "<p>基础攻击力: 674</p><p>暴击率: 22.1%</p>"
+          ]
+         },
+         {
+          "key": "平均每级提升：",
+          "value": [
+           "<p></p>"
+          ]
+         }
+        ],
+        "materials": []
+       }
+      ]
+     }
+    }
+   ]
+  }
+ ]
+}
