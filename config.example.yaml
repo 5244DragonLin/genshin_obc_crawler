@@ -16,6 +16,10 @@ download_images: true
 # 每个分类最多导出几条，0 = 不限
 limit: 0
 
+# 角色保留哪些语言的语音：默认只留汉语；要日语/英语/韩语就加进列表，all = 全部
+voice_languages:
+  - 汉语
+
 request:
   timeout: 30          # 单请求超时（秒）
   retries: 2           # 网络异常重试次数

@@ -9,7 +9,8 @@
 - ``role_talent`` —— 天赋：每项含名称、说明、倍率表
 - ``role_ascension`` —— 突破材料：按「N级属性/突破所需材料」分档
 - ``multi_table``（模块「命之座」）—— 六命：单元格内嵌图标 + 名称 + 说明
-- ``role_voice`` —— 语音：按语言分组（汉语 / 日语 / 英语 / 韩语）
+- ``role_voice`` —— 语音台词：按语言分组，默认只保留汉语
+  （``voice_languages`` 参数可改，``"all"`` 保留全部语言）
 - ``role_relation`` / ``recommend`` —— 角色关系网 / 推荐装备（方表，保留行列）
 - 折叠面板 —— 角色故事 1-5、角色CV、特殊料理、回答等，按模块名收集
 
@@ -21,6 +22,8 @@ import re
 from model_utils import (base_attrs, collapse_panels, components, find_components,
                          first_component, materials, table, tables)
 from richtext import clean_html, clean_values, extract_images, html_to_text
+
+VOICE_LANGUAGES = ("汉语",)     # 默认保留的语音语言，配置 voice_languages 可覆盖
 
 _CV_LABELS = ("中", "日", "英", "韩")
 
@@ -156,12 +159,21 @@ def _ascension(page):
     return out
 
 
-def _voices(page):
+def _voices(page, languages=VOICE_LANGUAGES):
+    """语音台词 → ``{语言: [{name, content, audio?}]}``，按 ``languages`` 过滤。
+
+    ``languages`` 为 ``"all"`` 或含 ``"all"`` 时保留全部语言，否则只留列表里的。
+    """
+    keep_all = (languages == "all"
+                or (isinstance(languages, (list, tuple))
+                    and any(str(v).lower() == "all" for v in languages)))
     out = {}
     for data in find_components(page, "role_voice"):
         for group in data.get("list") or []:
             lang = str((group or {}).get("tab_name") or "").strip()
             if not lang:
+                continue
+            if not keep_all and languages and lang not in languages:
                 continue
             lines = []
             for voice in group.get("table") or []:
@@ -195,8 +207,11 @@ def _relations(page):
     return None
 
 
-def build(card, page):
-    """组装单个角色词条。``card`` 是分类卡片，``page`` 是词条正文。"""
+def build(card, page, voice_languages=VOICE_LANGUAGES):
+    """组装单个角色词条。``card`` 是分类卡片，``page`` 是词条正文。
+
+    ``voice_languages`` 指定保留哪些语言的语音，``"all"`` = 全部语言。
+    """
     from obc_api import ENTRY_URL, Client
 
     base = first_component(page, "role_base_info") or {}
@@ -248,7 +263,7 @@ def build(card, page):
     if relations:
         record["relations"] = relations
 
-    voices = _voices(page)
+    voices = _voices(page, voice_languages)
     if voices:
         record["voices"] = voices
 

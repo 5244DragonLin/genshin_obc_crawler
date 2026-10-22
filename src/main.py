@@ -113,7 +113,8 @@ def main(argv=None):
         return 0
 
     exporter = Exporter(client, out_root, images=images, limit=limit,
-                        refresh=refresh, console=console)
+                        refresh=refresh, console=console,
+                        voice_languages=cfg.get("voice_languages"))
     stats = exporter.run(catalogs)
 
     console("\n" + "=" * 68)

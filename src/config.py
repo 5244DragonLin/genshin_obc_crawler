@@ -13,6 +13,7 @@ DEFAULT_CONFIG = {
     "output_dir": "output",
     "download_images": True,
     "limit": 0,
+    "voice_languages": ["汉语"],
     "request": {
         "timeout": 30,
         "retries": 2,

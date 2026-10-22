@@ -70,9 +70,15 @@ class TestCharacterModel(unittest.TestCase):
         self.assertEqual(first["id"], "857")
 
     def test_voices_and_stories(self):
-        self.assertIn("汉语", self.record["voices"])
+        # 默认只保留汉语语音
+        self.assertEqual(list(self.record["voices"].keys()), ["汉语"])
         self.assertIn("初次见面…", [v["name"] for v in self.record["voices"]["汉语"]])
         self.assertIn("角色故事1", self.record["stories"])
+
+    def test_voices_all_languages(self):
+        page = load_fixture("character")
+        record = character_model.build(CARD, page, voice_languages="all")
+        self.assertEqual(set(record["voices"].keys()), {"汉语", "日语", "英语", "韩语"})
 
     def test_markdown(self):
         text = character_md.render(self.record)

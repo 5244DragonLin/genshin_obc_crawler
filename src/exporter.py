@@ -90,7 +90,7 @@ def _download(url, path, opener=None):
 
 class Exporter:
     def __init__(self, client, out_root, images=True, limit=0, refresh=False,
-                 console=None):
+                 console=None, voice_languages=None):
         self.client = client
         self.out_root = out_root
         self.images = bool(images)
@@ -98,6 +98,7 @@ class Exporter:
         self.refresh = bool(refresh)
         self.console = console or print
         self.opener = client.opener
+        self.voice_languages = voice_languages or character_model.VOICE_LANGUAGES
         self.changes = Changes()
         self._cover_urls = {}               # catalog_key -> {id: 远程封面地址}
         self._load_state()
@@ -173,7 +174,10 @@ class Exporter:
             title = self.client.card_name(card)
             try:
                 page = self.client.entry_page(entry_id, refresh=self.refresh)
-                record = catalog["model"].build(card, page)
+                record = catalog["model"].build(
+                    card, page,
+                    voice_languages=(self.voice_languages
+                                     if catalog["key"] == "character" else None))
                 record["cover"] = self._cover(catalog, record)
                 records.append(record)
                 seen.add(entry_id)
