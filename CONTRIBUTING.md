@@ -3,8 +3,8 @@
 ## 本地开发
 
 ```bash
-git clone https://github.com/5244DragonLin/genshin_obc_exporter.git
-cd genshin_obc_exporter
+git clone https://github.com/5244DragonLin/genshin_obc_crawler.git
+cd genshin_obc_crawler
 pip install -r requirements.txt        # 仅 PyYAML（可选）
 python -m unittest discover -s tests   # 跑测试
 python src/main.py --dry-run           # 不联网落盘，先看分类规模

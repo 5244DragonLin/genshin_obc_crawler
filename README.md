@@ -1,4 +1,4 @@
-# genshin_obc_exporter：原神观测枢图鉴导出工具
+# genshin_obc_crawler：原神观测枢图鉴导出工具
 
 基于纯 Python 标准库调用米游社「观测枢」（原神官方 WIKI）的公开接口，一条命令导出角色、武器、圣遗物图鉴（JSON）与角色图鉴（Markdown），词条封面随产物落盘。
 
@@ -13,7 +13,7 @@
 - 老的词条详情接口只覆盖未迁移的旧词条，新词条请求会报「内容不存在」，需要走新平台接口并统一新旧数据
 - 站点随版本更新，想要最新内容就得能随时重跑
 
-**genshin_obc_exporter 解决这些问题**：把字符串化字段还原成结构、把组件模板还原成字段，一次运行落盘成可直接检索的 JSON 与 Markdown。
+**genshin_obc_crawler 解决这些问题**：把字符串化字段还原成结构、把组件模板还原成字段，一次运行落盘成可直接检索的 JSON 与 Markdown。
 
 ## ⭐亮点
 
@@ -153,12 +153,12 @@
 
 ```bash
 # Gitee 镜像（国内访问快）
-git clone https://gitee.com/yhl5244/genshin_obc_exporter.git
+git clone https://gitee.com/yhl5244/genshin_obc_crawler.git
 
 # GitHub 原仓库
-git clone https://github.com/5244DragonLin/genshin_obc_exporter.git
+git clone https://github.com/5244DragonLin/genshin_obc_crawler.git
 
-cd genshin_obc_exporter
+cd genshin_obc_crawler
 ```
 
 ### 2. 安装依赖
@@ -270,7 +270,7 @@ logging:
 ## 📁项目结构
 
 ```text
-genshin_obc_exporter/
+genshin_obc_crawler/
 ├── src/
 │   ├── main.py              # 命令行入口
 │   ├── config.py            # 配置加载（内置极简 YAML 解析）
