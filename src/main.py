@@ -21,7 +21,7 @@ if SCRIPT_DIR not in sys.path:
     sys.path.insert(0, SCRIPT_DIR)
 
 from config import load_config                           # noqa: E402
-from exporter import CATALOGS, Exporter, normalize_catalogs   # noqa: E402
+from exporter import CATALOGS, Exporter, is_preview, normalize_catalogs  # noqa: E402
 from obc_api import Client                               # noqa: E402
 from progress import Console                             # noqa: E402
 
@@ -77,6 +77,7 @@ def main(argv=None):
                 if args.progress is None else args.progress)
     console = Console(show_bar=show_bar)
     refresh = bool(args.refresh)
+    export_concurrency = int((cfg.get("request") or {}).get("concurrency") or 16)
 
     try:
         catalogs = normalize_catalogs(args.only)
@@ -93,6 +94,7 @@ def main(argv=None):
     console(f"原神观测枢图鉴导出 {VERSION}｜{len(catalogs)} 个分类")
     console(f"本次抓取：{'、'.join(c['name'] for c in catalogs)}")
     console(f"输出目录：{out_root}")
+    console(f"并发：{export_concurrency} 路")
     console("增量方式：全量正文 + 指纹对账（未变化的条目不重写）")
     console("=" * 68)
 
@@ -103,10 +105,12 @@ def main(argv=None):
         bar = console.bar(len(catalogs), label="盘点")
         for index, catalog in enumerate(catalogs, 1):
             cards = client.channel_cards(catalog["channel"], refresh=refresh)
-            count = min(len(cards), limit) if limit else len(cards)
+            previewed = sum(1 for card in cards if is_preview(card))
+            count = min(len(cards), limit) if limit else len(cards) - previewed
             total += count
+            preview_note = f"，其中未上线 {previewed} 条不导出" if previewed else ""
             console(f"[dry-run] {catalog['name']}"
-                    f"（channel={catalog['channel']}）：{count} 条")
+                    f"（channel={catalog['channel']}）：{count} 条{preview_note}")
             bar.update(index, suffix=f"合计 {total} 条")
         bar.close(suffix=f"合计 {total} 条")
         console(f"[dry-run] 合计 {total} 条")
@@ -114,7 +118,8 @@ def main(argv=None):
 
     exporter = Exporter(client, out_root, images=images, limit=limit,
                         refresh=refresh, console=console,
-                        voice_languages=cfg.get("voice_languages"))
+                        voice_languages=cfg.get("voice_languages"),
+                        concurrency=export_concurrency)
     stats = exporter.run(catalogs)
 
     console("\n" + "=" * 68)

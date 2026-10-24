@@ -19,9 +19,10 @@ DEFAULT_CONFIG = {
         "retries": 2,
         "delay": 0.1,
         "proxy": "",
+        "concurrency": 16,
     },
     "cache": {
-        "enabled": True,
+        "enabled": False,
         "dir": ".cache",
         "ttl_hours": 24,
     },

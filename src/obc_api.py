@@ -34,6 +34,9 @@ ENTRY_URL = "https://baike.mihoyo.com/ys/obc/content/{}/detail"
 UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/120.0 Safari/537.36")
 
+# 未上线词条的标题标记，如「米提亚【预告】」；正文全是「待更新」占位
+PREVIEW_MARK = "预告"
+
 # 数据源全是国内 CDN：默认绕过系统 / 环境变量代理直连，需要代理时在
 # config.yaml 的 request.proxy 里显式指定。opener 全局共享。
 _direct_opener = urllib.request.build_opener(urllib.request.ProxyHandler({}))
@@ -241,6 +244,11 @@ class Client:
     @staticmethod
     def card_alias(card):
         return str((card or {}).get("alias_name") or "").strip()
+
+    @staticmethod
+    def card_is_preview(card):
+        """未上线词条（标题带「预告」标记，如「米提亚【预告】」）。"""
+        return PREVIEW_MARK in str((card or {}).get("title") or "")
 
     @staticmethod
     def card_filters(card):

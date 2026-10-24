@@ -55,6 +55,12 @@ class TestCardHelpers(unittest.TestCase):
         client = Client()
         self.assertEqual(client.card_id({"content_id": 54}), "54")
 
+    def test_card_is_preview(self):
+        client = Client()
+        self.assertTrue(client.card_is_preview({"title": "米提亚【预告】"}))
+        self.assertFalse(client.card_is_preview({"title": "丝柯克"}))
+        self.assertFalse(client.card_is_preview({}))
+
 
 class TestNormalizeCatalogs(unittest.TestCase):
     def test_default_all(self):

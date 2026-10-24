@@ -207,6 +207,36 @@ def _relations(page):
     return None
 
 
+_ART_HINTS = ("立绘", "角色展示")
+
+
+def _portrait(displays, name):
+    """从「角色展示」里挑出立绘地址；没有返回 ``None``。
+
+    站点页签名不统一：老角色叫「角色立绘」，新角色叫「角色展示」，也有直接
+    用角色名或「空」「荧」的。共同点是列表里只有它是静态图，其余都是技能与
+    待机的 gif，所以按「不是动图」筛，再按名字对齐。
+    """
+    candidates = [item for item in displays
+                  if item.get("image")
+                  and not item["image"].lower().endswith(".gif")]
+    if not candidates:
+        return None
+    # 旅行者一题多版：名字写成「旅行者（空）」，靠括号里的称呼对齐
+    inner = re.search(r"[（(]([^）)]+)[）)]", name or "")
+    if inner:
+        for item in candidates:
+            if item["name"] == inner.group(1):
+                return item["image"]
+    for item in candidates:
+        if item["name"] == name:
+            return item["image"]
+    for item in candidates:
+        if any(hint in item["name"] for hint in _ART_HINTS):
+            return item["image"]
+    return candidates[0]["image"]
+
+
 def build(card, page, voice_languages=VOICE_LANGUAGES):
     """组装单个角色词条。``card`` 是分类卡片，``page`` 是词条正文。
 
@@ -288,5 +318,8 @@ def build(card, page, voice_languages=VOICE_LANGUAGES):
                 displays.append({"name": name, "image": image})
     if displays:
         record["displays"] = displays
+        art = _portrait(displays, record["name"])
+        if art:
+            record["portrait"] = art
 
     return record

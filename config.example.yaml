@@ -25,11 +25,12 @@ request:
   retries: 2           # 网络异常重试次数
   delay: 0.1           # 请求间隔（秒），对接口友好
   proxy: ""            # 代理地址（如 http://127.0.0.1:7890）；留空 = 绕过系统代理直连
+  concurrency: 16      # 并发路数；16 经压测零失败，详见 README 的 FAQ。1 = 回到逐条串行
 
 cache:
-  enabled: true        # 分类列表与词条正文本地缓存，中断后重跑续着补
-  dir: .cache
-  ttl_hours: 24        # 缓存有效期（小时），0 = 永不过期
+  enabled: false       # 词条原文本地缓存，默认关闭：全量重取约 15 秒，不值得占 40M 磁盘
+  dir: .cache          # 仅在 enabled: true 时生效，相对路径以项目根目录为基准
+  ttl_hours: 24        # 缓存有效期（小时），0 = 永不过期；超过 24 小时日常每日一跑必然全部过期
 
 logging:
   verbose: false       # 打印每次请求明细

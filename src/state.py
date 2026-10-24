@@ -16,7 +16,7 @@ import json
 import os
 import time
 
-# 参与指纹时忽略的键：本地封面路径随下载状态变化，不是内容本身
+# 参与指纹时忽略的键：本地图片路径随下载状态变化，不是内容本身
 _VOLATILE_KEYS = ("cover",)
 
 

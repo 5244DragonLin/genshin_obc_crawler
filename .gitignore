@@ -42,6 +42,7 @@ htmlcov/
 .vscode/
 .DS_Store
 Thumbs.db
+.workbuddy/
 
 # 临时文件
 *.tmp

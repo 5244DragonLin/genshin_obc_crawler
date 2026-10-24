@@ -3,7 +3,8 @@
 """分类定义、抓取编排、封面下载与落盘。
 
 三类图鉴各自对应观测枢的一个频道（channel_id），列表接口一次取全，
-词条正文逐条从 hoyowiki 新平台接口获取。产物结构：
+词条正文逐条从 hoyowiki 新平台接口获取。标题带「预告」的未上线词条
+（如「米提亚【预告】」，正文全是「待更新」占位）直接跳过不导出。产物结构：
 
 - ``角色图鉴.json`` + ``旅行者/<角色>.md``（每人一篇，附 ``index.md``）
 - ``武器图鉴.json`` / ``圣遗物图鉴.json``
@@ -14,14 +15,17 @@
 import json
 import os
 import re
+import threading
 import time
+import urllib.parse
 import urllib.request
+from concurrent.futures import ThreadPoolExecutor
 
 import artifact_model
 import character_md
 import character_model
 import weapon_model
-from obc_api import Client, get_opener
+from obc_api import PREVIEW_MARK, Client, get_opener
 from state import Changes, fingerprint, load_old_records, write_manifest
 
 UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
@@ -45,6 +49,15 @@ _ALIASES = {
 }
 
 _MD_DIR = "旅行者"          # 角色 Markdown 目录
+_ART_DIR = "立绘"           # 角色立绘子目录（相对 assets/character）
+
+# 按标题标记跳过的未上线词条（如「米提亚【预告】」，正文全是「待更新」占位）
+_SKIP_PREVIEWS = True
+
+
+def is_preview(card):
+    """未上线词条：标题带「预告」标记（米提亚【预告】、瓦列里【预告】）。"""
+    return _SKIP_PREVIEWS and PREVIEW_MARK in Client.card_name(card)
 
 
 def normalize_catalogs(only):
@@ -70,8 +83,44 @@ def _safe_name(name):
     return re.sub(r'[\\/:*?"<>|]', "_", str(name or "")).strip() or "未命名"
 
 
+def _url_ext(url):
+    """图片地址的后缀名，认不出时按 .png 处理。"""
+    ext = os.path.splitext(urllib.parse.urlparse(str(url or "")).path)[1].lower()
+    return ext if ext in (".png", ".jpg", ".jpeg", ".webp") else ".png"
+
+
+def _image_paths(record):
+    """记录里的本地图片路径，用来判断产物是否需要重写。"""
+    return (record.get("cover"),)
+
+
+def _name_counts(records):
+    """统计同一分类内各名字出现次数，用来判断是否需要追加后缀。"""
+    counts = {}
+    for record in records:
+        name = record.get("name") or ""
+        counts[name] = counts.get(name, 0) + 1
+    return counts
+
+
+def _looks_ok(path):
+    """本地文件是否还可用：不存在或小到不可能是一张图都视为不可用。
+
+    站点最小的封面约 3.6KB，1KB 的下限只拦截断文件与 0 字节文件，
+    避免一次写坏之后再也走不到重新下载的分支。
+    """
+    try:
+        return os.path.getsize(path) > 1024
+    except OSError:
+        return False
+
+
 def _download(url, path, opener=None):
-    """下载封面到本地；成功返回 True。"""
+    """下载封面到本地；成功返回 True。
+
+    临时文件名带上线程标识：同名词条（如旅行者各元素版本）会落到同一个
+    封面路径，并发写时若共用 ``.tmp`` 会互相截断，加线程号后各写各的。
+    """
     try:
         req = urllib.request.Request(url)
         req.add_header("User-Agent", UA)
@@ -79,7 +128,7 @@ def _download(url, path, opener=None):
         with (opener or get_opener()).open(req, timeout=30) as resp:
             data = resp.read()
         os.makedirs(os.path.dirname(path), exist_ok=True)
-        tmp = path + ".tmp"
+        tmp = f"{path}.{os.getpid()}-{threading.get_ident()}.tmp"
         with open(tmp, "wb") as f:
             f.write(data)
         os.replace(tmp, path)
@@ -90,7 +139,7 @@ def _download(url, path, opener=None):
 
 class Exporter:
     def __init__(self, client, out_root, images=True, limit=0, refresh=False,
-                 console=None, voice_languages=None):
+                 console=None, voice_languages=None, concurrency=16):
         self.client = client
         self.out_root = out_root
         self.images = bool(images)
@@ -99,8 +148,11 @@ class Exporter:
         self.console = console or print
         self.opener = client.opener
         self.voice_languages = voice_languages or character_model.VOICE_LANGUAGES
+        self.concurrency = max(1, int(concurrency or 1))
         self.changes = Changes()
-        self._cover_urls = {}               # catalog_key -> {id: 远程封面地址}
+        self._cover_urls = {}               # catalog_key -> {id: 远程头像地址}
+        self._art_urls = {}                 # catalog_key -> {id: 远程立绘地址}
+        self._cover_lock = threading.Lock()  # 图片台账在多线程里登记，加锁保护
         self._load_state()
 
     # ------------------------------------------------------------------
@@ -111,6 +163,8 @@ class Exporter:
                 data = json.load(f)
             if isinstance(data.get("cover_urls"), dict):
                 self._cover_urls = data["cover_urls"]
+            if isinstance(data.get("art_urls"), dict):
+                self._art_urls = data["art_urls"]
         except Exception:
             pass
 
@@ -118,29 +172,82 @@ class Exporter:
         path = os.path.join(self.out_root, ".state.json")
         tmp = path + ".tmp"
         with open(tmp, "w", encoding="utf-8") as f:
-            json.dump({"cover_urls": self._cover_urls}, f, ensure_ascii=False)
+            json.dump({"cover_urls": self._cover_urls, "art_urls": self._art_urls},
+                      f, ensure_ascii=False)
         os.replace(tmp, path)
 
     # ------------------------------------------------------------------
-    def _cover(self, catalog, record):
-        """下载词条封面，返回相对产物目录的路径；失败返回 None。
-
-        远程地址没变时直接沿用本地文件，不重复下载。
-        """
-        url = record.get("icon")
-        if not self.images or not url:
-            return None
-        known = self._cover_urls.setdefault(catalog["key"], {})
-        name = _safe_name(record.get("name") or record.get("id"))
-        relative = os.path.join("assets", catalog["key"], f"{name}.png")
+    def _fetch_image(self, key, entry_id, url, relative, ledger):
+        """按「地址没变且本地文件完好」判定可复用，否则下载；成功返回 True。"""
         absolute = os.path.join(self.out_root, relative)
-        if known.get(record.get("id")) == url and os.path.isfile(absolute):
-            return relative
-        if _download(url, absolute, self.opener):
-            known[record.get("id")] = url
-            return relative
-        self.console(f"    封面下载失败：{record.get('name')}")
-        return None
+        with self._cover_lock:
+            known = ledger.setdefault(key, {})
+            reusable = known.get(entry_id) == url and _looks_ok(absolute)
+        if reusable:
+            return True
+        if not _download(url, absolute, self.opener):
+            return False
+        with self._cover_lock:
+            known[entry_id] = url
+        return True
+
+    def _cover(self, catalog, record, name_counts):
+        """下载图片，返回 ``(封面路径, 失败提示)``。
+
+        角色只下词条内的立绘，不再保留列表页的 196×196 头像；没有立绘的词条
+        封面留空。武器与圣遗物仍取列表页的图标。
+
+        文件名与 Markdown 用同一套规则（同名记录追加元素后缀），旅行者各元素
+        版本因此各占一个文件，不再互相覆盖。
+
+        本方法会在多个线程里同时执行：台账读写加锁，提示文案返回给主线程
+        去打，避免和进度条抢同一行。
+        """
+        if not self.images:
+            return None, None
+        key = catalog["key"]
+        entry_id = record.get("id")
+        stem = self._file_stem(record, name_counts)
+
+        if key == "character":
+            if not record.get("portrait"):
+                return None, None
+            relative = os.path.join("assets", key, _ART_DIR,
+                                    f"{stem}{_url_ext(record['portrait'])}")
+            if self._fetch_image(key, entry_id, record["portrait"], relative,
+                                 self._art_urls):
+                return relative, None
+            return None, f"    立绘下载失败：{record.get('name')}"
+
+        if not record.get("icon"):
+            return None, None
+        relative = os.path.join("assets", key, f"{stem}.png")
+        if self._fetch_image(key, entry_id, record["icon"], relative,
+                             self._cover_urls):
+            return relative, None
+        return None, f"    封面下载失败：{record.get('name')}"
+
+    # ------------------------------------------------------------------
+    def _build(self, catalog, card):
+        """单条词条建模，取正文但不碰封面。
+
+        封面留到全部记录就绪后再并发下载：文件名要不要加元素后缀，取决于
+        同一分类内还有没有同名记录，而这个信息只有全部建模完才知道。
+        """
+        entry_id = self.client.card_id(card)
+        try:
+            page = self.client.entry_page(entry_id, refresh=self.refresh)
+            # 只有角色模型接受 voice_languages，武器/圣遗物模型是 build(card, page)
+            if catalog["key"] == "character":
+                record = catalog["model"].build(card, page,
+                                                voice_languages=self.voice_languages)
+            else:
+                record = catalog["model"].build(card, page)
+            record["cover"] = None
+            return record, None
+        except Exception as e:
+            return None, {"id": entry_id, "name": self.client.card_name(card),
+                          "error": str(e)[:200]}
 
     # ------------------------------------------------------------------
     def run(self, catalogs):
@@ -162,6 +269,13 @@ class Exporter:
         old_records = load_old_records(self.out_root, catalog)
         old_by_id = dict(old_records)
 
+        # 未上线词条（标题带「预告」）不导出：正文全是「待更新」占位，
+        # 之前抓进去的旧记录因此对不上，会按「移除」清掉 JSON 与 Markdown
+        skipped = [Client.card_name(card) for card in cards if is_preview(card)]
+        if skipped:
+            self.console(f"  跳过未上线词条 {len(skipped)} 条：{'、'.join(skipped)}")
+        cards = [card for card in cards if not is_preview(card)]
+
         records, errors = [], []
         added = updated = removed = unchanged = 0
         old_fingerprints = {rid: fingerprint(rec) for rid, rec in old_by_id.items()}
@@ -169,47 +283,90 @@ class Exporter:
         cards = cards[:self.limit] if self.limit else cards
         seen = set()
         bar = self.console.bar(len(cards), label=name)
-        for index, card in enumerate(cards, 1):
-            entry_id = self.client.card_id(card)
-            title = self.client.card_name(card)
-            try:
-                page = self.client.entry_page(entry_id, refresh=self.refresh)
-                record = catalog["model"].build(
-                    card, page,
-                    voice_languages=(self.voice_languages
-                                     if catalog["key"] == "character" else None))
-                record["cover"] = self._cover(catalog, record)
-                records.append(record)
-                seen.add(entry_id)
-                new_fp = fingerprint(record)
-                if entry_id in old_fingerprints:
-                    if new_fp == old_fingerprints[entry_id]:
-                        unchanged += 1
-                    else:
-                        updated += 1
+        # 并发只覆盖「等网络」这一段；统计、进度条、落盘都在主线程做，
+        # 结果按 ``pool.map`` 的输入顺序回收，产物顺序与串行时一致。
+        done = 0
+        fresh = []                              # 本轮建模成功、待下封面的记录
+        with ThreadPoolExecutor(max_workers=self.concurrency) as pool:
+            for record, error in pool.map(
+                    lambda card: self._build(catalog, card), cards):
+                done += 1
+                if error is not None:
+                    entry_id = error["id"]
+                    errors.append(error)
+                    if entry_id in old_by_id:       # 单条失败保留旧记录
+                        records.append(old_by_id[entry_id])
+                        seen.add(entry_id)
                 else:
-                    added += 1
-            except Exception as e:                  # 单条失败保留旧记录
-                errors.append({"id": entry_id, "name": title, "error": str(e)[:200]})
-                if entry_id in old_by_id:
-                    records.append(old_by_id[entry_id])
+                    entry_id = str(record.get("id"))
+                    records.append(record)
+                    fresh.append(record)
                     seen.add(entry_id)
-            bar.update(index)
+                    new_fp = fingerprint(record)
+                    if entry_id in old_fingerprints:
+                        if new_fp == old_fingerprints[entry_id]:
+                            unchanged += 1
+                        else:
+                            updated += 1
+                    else:
+                        added += 1
+                bar.update(done)
         bar.close(suffix=f"失败 {len(errors)} 条")
+
+        # 封面单独一轮：此时全部记录已就绪，重名判断才准确，每条记录各有
+        # 一个确定的文件路径，不会因为并发完成先后而互相覆盖。
+        if fresh:
+            name_counts = _name_counts(records)
+            warnings = []
+            with ThreadPoolExecutor(max_workers=self.concurrency) as pool:
+                for record, (cover, warning) in zip(
+                        fresh, pool.map(
+                            lambda rec: self._cover(catalog, rec, name_counts),
+                            fresh)):
+                    record["cover"] = cover
+                    if warning:
+                        warnings.append(warning)
+            for warning in warnings:
+                self.console(warning)
+            # 内容没变但封面路径变了（如加后缀区分同名记录）也算一轮更新，
+            # 否则会跳过重写，JSON 里的路径与磁盘上的文件对不上。
+            repathed = 0
+            for record in fresh:
+                entry_id = str(record.get("id"))
+                old = old_by_id.get(entry_id)
+                if old is None:
+                    continue
+                if fingerprint(record) == old_fingerprints.get(entry_id) \
+                        and _image_paths(record) != _image_paths(old):
+                    repathed += 1
+            if repathed:
+                unchanged -= repathed
+                updated += repathed
 
         removed_ids = [rid for rid in old_by_id if rid not in seen]
         removed = len(removed_ids)
+        # 移除条目的封面文件一并清理（Markdown 已有对应清理），避免磁盘留孤儿图
+        for rid in removed_ids:
+            cover = (old_by_id.get(rid) or {}).get("cover")
+            if not cover:
+                continue
+            try:
+                os.remove(os.path.join(self.out_root, cover))
+            except OSError:
+                pass
         if not errors and records:
             # 全部条目未变且没有增删时，不重写产物
             same_set = (set(seen) == set(old_fingerprints))
             all_same = same_set and all(
                 fingerprint(rec) == old_fingerprints.get(str(rec.get("id")))
+                and _image_paths(rec) == _image_paths(old_by_id.get(str(rec.get("id"))) or {})
                 for rec in records)
             if all_same:
                 if catalog.get("md"):
                     # 产物文件可能被手动删过：检查一遍，缺了就地补齐
                     self._write_markdown(records, removed_ids, old_records)
-                self.console(f"  {name} 完成：{len(records)} 条，未变 {unchanged} 条，产物不重写")
+                self.console(f"  {name} 完成：{len(records)} 条，未变 {unchanged} 条，产物不重写"
+                             + (f"（跳过未上线 {len(skipped)} 条）" if skipped else ""))
                 self.changes.add(catalog["key"], name, added, updated, removed,
                                  len(errors), unchanged)
                 return {"key": catalog["key"], "name": name, "count": len(records),
@@ -221,7 +378,8 @@ class Exporter:
         if catalog.get("md"):
             self._write_markdown(records, removed_ids, old_records)
         self.console(f"  {name} 完成：{len(records)} 条，失败 {len(errors)} 条"
-                     f"（新增 {added} / 更新 {updated} / 移除 {removed} / 未变 {unchanged}）")
+                     f"（新增 {added} / 更新 {updated} / 移除 {removed} / 未变 {unchanged}）"
+                     + (f"，跳过未上线 {len(skipped)} 条" if skipped else ""))
         self.changes.add(catalog["key"], name, added, updated, removed,
                          len(errors), unchanged)
         return {"key": catalog["key"], "name": name, "count": len(records),
@@ -278,13 +436,21 @@ class Exporter:
                      f"（本次重写 {written} 篇）")
 
     @staticmethod
-    def _md_filename(record, name_counts):
+    def _file_stem(record, name_counts):
+        """文件名主干：同名记录追加元素或 id，避免落到同一个文件。
+
+        Markdown 与封面共用这一套规则，两边的文件名保持一致。
+        """
         name = _safe_name(record.get("name") or record.get("id"))
         if name_counts.get(record.get("name") or "", 1) > 1:
             suffix = record.get("element") or record.get("id")
             if suffix:
                 name = f"{name}-{_safe_name(suffix)}"
-        return f"{name}.md"
+        return name
+
+    @classmethod
+    def _md_filename(cls, record, name_counts):
+        return f"{cls._file_stem(record, name_counts)}.md"
 
 
 def _md_fingerprint(record):
