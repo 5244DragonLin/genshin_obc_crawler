@@ -1,0 +1,273 @@
+{
+ "id": "509950",
+ "name": "莫尔斯果酿",
+ "desc": "莫尔斯果酿介绍\n沃雅妮莎特殊料理：鳞光咏叹调",
+ "modules": [
+  {
+   "name": "",
+   "is_poped": false,
+   "components": [
+    {
+     "component_id": "material_base_info",
+     "layout": "",
+     "data": {
+      "name": "奇怪的莫尔斯果酿",
+      "img": "https://act-upload.mihoyo.com/wiki-user-upload/2026/09/23/75610764/a9798ef63ec8aacb63b24c256df0727f_2163364861358067195.png",
+      "star": 3,
+      "materials": {
+       "key": "加工材料",
+       "value": "<p><span class=\"custom-entry-wrapper\" data-entry-id=\"509312\" data-entry-ratio=\"small\" data-entry-img=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/12/183046623/868d7cf660e7eb400a5d320a27769bbf_3306266009497394716.png\" data-entry-name=\"冰醋栗\" data-entry-amount=\"3\" data-entry-link=\"/ys/obc/content/509312/detail?bbs_presentation_style=no_header\" data-entry-status=\"Online\" data-updated=\"0\"><a href=\"/ys/obc/content/509312/detail?bbs_presentation_style=no_header\" target=\"_blank\" class=\"entry-material-box entry-material-small\"><img class=\"image\" src=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/12/183046623/868d7cf660e7eb400a5d320a27769bbf_3306266009497394716.png\"><span class=\"entry-material-wrap\"><span class=\"name\">冰醋栗</span></span><span class=\"amount\">*3</span></a></span><span class=\"custom-entry-wrapper\" data-entry-id=\"509310\" data-entry-ratio=\"small\" data-entry-img=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/12/183046623/8b9359c04f891f41247dfe521ad95fc4_5687272845493479739.png\" data-entry-name=\"冰星果\" data-entry-amount=\"2\" data-entry-link=\"/ys/obc/content/509310/detail?bbs_presentation_style=no_header\" data-entry-status=\"Online\" data-updated=\"0\"><a href=\"/ys/obc/content/509310/detail?bbs_presentation_style=no_header\" target=\"_blank\" class=\"entry-material-box entry-material-small\"><img class=\"image\" src=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/12/183046623/8b9359c04f891f41247dfe521ad95fc4_5687272845493479739.png\"><span class=\"entry-material-wrap\"><span class=\"name\">冰星果</span></span><span class=\"amount\">*2</span></a></span><span class=\"custom-entry-wrapper\" data-entry-id=\"509532\" data-entry-ratio=\"small\" data-entry-img=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/15/75610764/2c3a9946b05defdc52fd6551f88fc604_1064468176764828612.png\" data-entry-name=\"蜂蜜\" data-entry-amount=\"1\" data-entry-link=\"/ys/obc/content/509532/detail?bbs_presentation_style=no_header\" data-entry-status=\"Online\" data-updated=\"0\"><a href=\"/ys/obc/content/509532/detail?bbs_presentation_style=no_header\" target=\"_blank\" class=\"entry-material-box entry-material-small\"><img class=\"image\" src=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/15/75610764/2c3a9946b05defdc52fd6551f88fc604_1064468176764828612.png\"><span class=\"entry-material-wrap\"><span class=\"name\">蜂蜜</span></span><span class=\"amount\">*1</span></a></span><span class=\"custom-entry-wrapper\" data-entry-id=\"777\" data-entry-ratio=\"small\" data-entry-img=\"https://act-upload.mihoyo.com/ys-obc/2023/10/13/24077343/098cd7462a566c5ebb8d17d39bab79d6_2774656492092502168.png\" data-entry-name=\"糖\" data-entry-amount=\"1\" data-entry-link=\"/ys/obc/content/777/detail?bbs_presentation_style=no_header\" data-entry-status=\"Online\" data-updated=\"0\"><a href=\"/ys/obc/content/777/detail?bbs_presentation_style=no_header\" target=\"_blank\" class=\"entry-material-box entry-material-small\"><img class=\"image\" src=\"https://act-upload.mihoyo.com/ys-obc/2023/10/13/24077343/098cd7462a566c5ebb8d17d39bab79d6_2774656492092502168.png\"><span class=\"entry-material-wrap\"><span class=\"name\">糖</span></span><span class=\"amount\">*1</span></a></span></p>"
+      },
+      "attr": [
+       {
+        "key": "描述",
+        "value": [
+         "<p>深红色的果酿。整杯呈现一种浑浊的暗紫色，喝起来又酸又涩，像是有人把墨水兑进了隔夜的果渣水里。倒掉可惜，可喝下又遭罪，真是令人头疼..</p>"
+        ]
+       },
+       {
+        "key": "使用效果",
+        "value": [
+         "<p>立即为选中的角色恢复生命值上限的26%，并在之后的30秒内，每5秒恢复450点生命值。</p>"
+        ]
+       },
+       {
+        "key": "获得方式",
+        "value": [
+         "<p>完成烹饪莫尔斯果酿</p>"
+        ]
+       },
+       {
+        "key": "食谱获得",
+        "value": [
+         "<p>至冬地区：<span class=\"custom-entry-wrapper\" data-entry-id=\"509513\" data-entry-ratio=\"text\" data-entry-img=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/14/178964736/30042a1f2e4212469386e40f8ff10691_2893284766273419259.png\" data-entry-name=\"齐良诺夫【「格瓦斯尼克」老板】\" data-entry-link=\"/ys/obc/content/509513/detail?bbs_presentation_style=no_header\" data-entry-status=\"Online\"><a href=\"/ys/obc/content/509513/detail?bbs_presentation_style=no_header\" target=\"_blank\" class=\"entry-material-box entry-material-text\"><span class=\"entry-material-wrap\"><span class=\"name\">齐良诺夫【「格瓦斯尼克」老板】</span></span></a></span></p>"
+        ]
+       }
+      ]
+     },
+     "style": ""
+    }
+   ],
+   "id": "128",
+   "is_customize_name": true,
+   "is_abstract": false,
+   "is_show_switch": false,
+   "switch": false,
+   "desc": "",
+   "repeated": false,
+   "is_submodule": false,
+   "origin_module_id": "0",
+   "without_border": false,
+   "can_delete": false,
+   "is_hidden": false,
+   "rich_text_editing": false
+  },
+  {
+   "name": "",
+   "is_poped": false,
+   "components": [
+    {
+     "component_id": "material_base_info",
+     "layout": "",
+     "data": {
+      "name": " 莫尔斯果酿",
+      "img": "https://act-upload.mihoyo.com/wiki-user-upload/2026/09/23/75610764/738aa41848f105c88f5f7a4c2eda7197_3229731984500540273.png",
+      "star": 3,
+      "materials": {
+       "key": "加工材料",
+       "value": "<p><span class=\"custom-entry-wrapper\" data-entry-id=\"509312\" data-entry-ratio=\"small\" data-entry-img=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/12/183046623/868d7cf660e7eb400a5d320a27769bbf_3306266009497394716.png\" data-entry-name=\"冰醋栗\" data-entry-amount=\"3\" data-entry-link=\"/ys/obc/content/509312/detail?bbs_presentation_style=no_header\" data-entry-status=\"Online\" data-updated=\"0\"><a href=\"/ys/obc/content/509312/detail?bbs_presentation_style=no_header\" target=\"_blank\" class=\"entry-material-box entry-material-small\"><img class=\"image\" src=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/12/183046623/868d7cf660e7eb400a5d320a27769bbf_3306266009497394716.png\"><span class=\"entry-material-wrap\"><span class=\"name\">冰醋栗</span></span><span class=\"amount\">*3</span></a></span><span class=\"custom-entry-wrapper\" data-entry-id=\"509310\" data-entry-ratio=\"small\" data-entry-img=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/12/183046623/8b9359c04f891f41247dfe521ad95fc4_5687272845493479739.png\" data-entry-name=\"冰星果\" data-entry-amount=\"2\" data-entry-link=\"/ys/obc/content/509310/detail?bbs_presentation_style=no_header\" data-entry-status=\"Online\" data-updated=\"0\"><a href=\"/ys/obc/content/509310/detail?bbs_presentation_style=no_header\" target=\"_blank\" class=\"entry-material-box entry-material-small\"><img class=\"image\" src=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/12/183046623/8b9359c04f891f41247dfe521ad95fc4_5687272845493479739.png\"><span class=\"entry-material-wrap\"><span class=\"name\">冰星果</span></span><span class=\"amount\">*2</span></a></span><span class=\"custom-entry-wrapper\" data-entry-id=\"509532\" data-entry-ratio=\"small\" data-entry-img=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/15/75610764/2c3a9946b05defdc52fd6551f88fc604_1064468176764828612.png\" data-entry-name=\"蜂蜜\" data-entry-amount=\"1\" data-entry-link=\"/ys/obc/content/509532/detail?bbs_presentation_style=no_header\" data-entry-status=\"Online\" data-updated=\"0\"><a href=\"/ys/obc/content/509532/detail?bbs_presentation_style=no_header\" target=\"_blank\" class=\"entry-material-box entry-material-small\"><img class=\"image\" src=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/15/75610764/2c3a9946b05defdc52fd6551f88fc604_1064468176764828612.png\"><span class=\"entry-material-wrap\"><span class=\"name\">蜂蜜</span></span><span class=\"amount\">*1</span></a></span><span class=\"custom-entry-wrapper\" data-entry-id=\"777\" data-entry-ratio=\"small\" data-entry-img=\"https://act-upload.mihoyo.com/ys-obc/2023/10/13/24077343/098cd7462a566c5ebb8d17d39bab79d6_2774656492092502168.png\" data-entry-name=\"糖\" data-entry-amount=\"1\" data-entry-link=\"/ys/obc/content/777/detail?bbs_presentation_style=no_header\" data-entry-status=\"Online\" data-updated=\"0\"><a href=\"/ys/obc/content/777/detail?bbs_presentation_style=no_header\" target=\"_blank\" class=\"entry-material-box entry-material-small\"><img class=\"image\" src=\"https://act-upload.mihoyo.com/ys-obc/2023/10/13/24077343/098cd7462a566c5ebb8d17d39bab79d6_2774656492092502168.png\"><span class=\"entry-material-wrap\"><span class=\"name\">糖</span></span><span class=\"amount\">*1</span></a></span></p>"
+      },
+      "attr": [
+       {
+        "key": "描述",
+        "value": [
+         "<p>深红色的果酿。将野地采来的浆果文火慢煮，碾碎滤出果汁后调入蜂蜜与少许糖，放凉即可饮用。酸甜可口，深受至冬少女们的喜爱。</p>"
+        ]
+       },
+       {
+        "key": "使用效果",
+        "value": [
+         "<p>立即为选中的角色恢复生命值上限的28%，并在之后的30秒内，每5秒恢复620点生命值。</p>"
+        ]
+       },
+       {
+        "key": "获得方式",
+        "value": [
+         "<p>成功烹饪莫尔斯果酿</p>"
+        ]
+       },
+       {
+        "key": "食谱获得",
+        "value": [
+         "<p>至冬地区：<span class=\"custom-entry-wrapper\" data-entry-id=\"509513\" data-entry-ratio=\"text\" data-entry-img=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/14/178964736/30042a1f2e4212469386e40f8ff10691_2893284766273419259.png\" data-entry-name=\"齐良诺夫【「格瓦斯尼克」老板】\" data-entry-link=\"/ys/obc/content/509513/detail?bbs_presentation_style=no_header\" data-entry-status=\"Online\"><a href=\"/ys/obc/content/509513/detail?bbs_presentation_style=no_header\" target=\"_blank\" class=\"entry-material-box entry-material-text\"><span class=\"entry-material-wrap\"><span class=\"name\">齐良诺夫【「格瓦斯尼克」老板】</span></span></a></span></p>"
+        ]
+       }
+      ]
+     },
+     "style": ""
+    }
+   ],
+   "id": "1171",
+   "is_customize_name": true,
+   "is_abstract": false,
+   "is_show_switch": false,
+   "switch": false,
+   "desc": "",
+   "repeated": false,
+   "is_submodule": false,
+   "origin_module_id": "0",
+   "without_border": false,
+   "can_delete": false,
+   "is_hidden": false,
+   "rich_text_editing": false
+  },
+  {
+   "name": "",
+   "is_poped": false,
+   "components": [
+    {
+     "component_id": "material_base_info",
+     "layout": "",
+     "data": {
+      "name": "美味的莫尔斯果酿",
+      "img": "https://act-upload.mihoyo.com/wiki-user-upload/2026/09/23/75610764/92a4b0612764aaf41a5b6d66f49d1ed9_929084734634843608.png",
+      "star": 3,
+      "materials": {
+       "key": "加工材料",
+       "value": "<p><span class=\"custom-entry-wrapper\" data-entry-id=\"509312\" data-entry-ratio=\"small\" data-entry-img=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/12/183046623/868d7cf660e7eb400a5d320a27769bbf_3306266009497394716.png\" data-entry-name=\"冰醋栗\" data-entry-amount=\"3\" data-entry-link=\"/ys/obc/content/509312/detail?bbs_presentation_style=no_header\" data-entry-status=\"Online\" data-updated=\"0\"><a href=\"/ys/obc/content/509312/detail?bbs_presentation_style=no_header\" target=\"_blank\" class=\"entry-material-box entry-material-small\"><img class=\"image\" src=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/12/183046623/868d7cf660e7eb400a5d320a27769bbf_3306266009497394716.png\"><span class=\"entry-material-wrap\"><span class=\"name\">冰醋栗</span></span><span class=\"amount\">*3</span></a></span><span class=\"custom-entry-wrapper\" data-entry-id=\"509310\" data-entry-ratio=\"small\" data-entry-img=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/12/183046623/8b9359c04f891f41247dfe521ad95fc4_5687272845493479739.png\" data-entry-name=\"冰星果\" data-entry-amount=\"2\" data-entry-link=\"/ys/obc/content/509310/detail?bbs_presentation_style=no_header\" data-entry-status=\"Online\" data-updated=\"0\"><a href=\"/ys/obc/content/509310/detail?bbs_presentation_style=no_header\" target=\"_blank\" class=\"entry-material-box entry-material-small\"><img class=\"image\" src=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/12/183046623/8b9359c04f891f41247dfe521ad95fc4_5687272845493479739.png\"><span class=\"entry-material-wrap\"><span class=\"name\">冰星果</span></span><span class=\"amount\">*2</span></a></span><span class=\"custom-entry-wrapper\" data-entry-id=\"509532\" data-entry-ratio=\"small\" data-entry-img=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/15/75610764/2c3a9946b05defdc52fd6551f88fc604_1064468176764828612.png\" data-entry-name=\"蜂蜜\" data-entry-amount=\"1\" data-entry-link=\"/ys/obc/content/509532/detail?bbs_presentation_style=no_header\" data-entry-status=\"Online\" data-updated=\"0\"><a href=\"/ys/obc/content/509532/detail?bbs_presentation_style=no_header\" target=\"_blank\" class=\"entry-material-box entry-material-small\"><img class=\"image\" src=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/15/75610764/2c3a9946b05defdc52fd6551f88fc604_1064468176764828612.png\"><span class=\"entry-material-wrap\"><span class=\"name\">蜂蜜</span></span><span class=\"amount\">*1</span></a></span><span class=\"custom-entry-wrapper\" data-entry-id=\"777\" data-entry-ratio=\"small\" data-entry-img=\"https://act-upload.mihoyo.com/ys-obc/2023/10/13/24077343/098cd7462a566c5ebb8d17d39bab79d6_2774656492092502168.png\" data-entry-name=\"糖\" data-entry-amount=\"1\" data-entry-link=\"/ys/obc/content/777/detail?bbs_presentation_style=no_header\" data-entry-status=\"Online\" data-updated=\"0\"><a href=\"/ys/obc/content/777/detail?bbs_presentation_style=no_header\" target=\"_blank\" class=\"entry-material-box entry-material-small\"><img class=\"image\" src=\"https://act-upload.mihoyo.com/ys-obc/2023/10/13/24077343/098cd7462a566c5ebb8d17d39bab79d6_2774656492092502168.png\"><span class=\"entry-material-wrap\"><span class=\"name\">糖</span></span><span class=\"amount\">*1</span></a></span></p>"
+      },
+      "attr": [
+       {
+        "key": "描述",
+        "value": [
+         "<p>深红色的果酿。还没凑近嘴边，酸甜的莓果香气就已经钻进了鼻腔。入口清冽而不寡淡，蜂蜜的甜度恰到好处地兜住了浆果的微酸，能一口征服任何人的味蕾。</p>"
+        ]
+       },
+       {
+        "key": "使用效果",
+        "value": [
+         "<p>立即为选中的角色恢复生命值上限的30%，并在之后的30秒内，每5秒恢复790点生命值。</p>"
+        ]
+       },
+       {
+        "key": "获得方式",
+        "value": [
+         "<p>完美烹饪莫尔斯果酿</p>"
+        ]
+       },
+       {
+        "key": "食谱获得",
+        "value": [
+         "<p>至冬地区：<span class=\"custom-entry-wrapper\" data-entry-id=\"509513\" data-entry-ratio=\"text\" data-entry-img=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/14/178964736/30042a1f2e4212469386e40f8ff10691_2893284766273419259.png\" data-entry-name=\"齐良诺夫【「格瓦斯尼克」老板】\" data-entry-link=\"/ys/obc/content/509513/detail?bbs_presentation_style=no_header\" data-entry-status=\"Online\"><a href=\"/ys/obc/content/509513/detail?bbs_presentation_style=no_header\" target=\"_blank\" class=\"entry-material-box entry-material-text\"><span class=\"entry-material-wrap\"><span class=\"name\">齐良诺夫【「格瓦斯尼克」老板】</span></span></a></span></p>"
+        ]
+       }
+      ]
+     },
+     "style": ""
+    }
+   ],
+   "id": "1172",
+   "is_customize_name": true,
+   "is_abstract": false,
+   "is_show_switch": false,
+   "switch": false,
+   "desc": "",
+   "repeated": false,
+   "is_submodule": false,
+   "origin_module_id": "0",
+   "without_border": false,
+   "can_delete": false,
+   "is_hidden": false,
+   "rich_text_editing": false
+  },
+  {
+   "name": "",
+   "is_poped": false,
+   "components": [
+    {
+     "component_id": "collapse_panel",
+     "layout": "",
+     "data": {
+      "rich_text": "<p></p>",
+      "switch": true,
+      "is_show_switch": true,
+      "without_border": false
+     },
+     "style": ""
+    }
+   ],
+   "id": "5893",
+   "is_customize_name": true,
+   "is_abstract": false,
+   "is_show_switch": true,
+   "switch": true,
+   "desc": "",
+   "repeated": false,
+   "is_submodule": false,
+   "origin_module_id": "0",
+   "without_border": false,
+   "can_delete": false,
+   "is_hidden": false,
+   "rich_text_editing": false
+  },
+  {
+   "name": "",
+   "is_poped": false,
+   "components": [
+    {
+     "component_id": "material_base_info",
+     "layout": "",
+     "data": {
+      "name": "鳞光咏叹调",
+      "img": "https://act-upload.mihoyo.com/wiki-user-upload/2026/09/23/75610764/bf70dfcd0944d55a063d5ef6281efe3a_385126301181680048.png",
+      "star": 3,
+      "materials": {
+       "key": "加工材料",
+       "value": "<p><span class=\"custom-entry-wrapper\" data-entry-id=\"509312\" data-entry-ratio=\"small\" data-entry-img=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/12/183046623/868d7cf660e7eb400a5d320a27769bbf_3306266009497394716.png\" data-entry-name=\"冰醋栗\" data-entry-amount=\"3\" data-entry-link=\"/ys/obc/content/509312/detail?bbs_presentation_style=no_header\" data-entry-status=\"Online\" data-updated=\"0\"><a href=\"/ys/obc/content/509312/detail?bbs_presentation_style=no_header\" target=\"_blank\" class=\"entry-material-box entry-material-small\"><img class=\"image\" src=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/12/183046623/868d7cf660e7eb400a5d320a27769bbf_3306266009497394716.png\"><span class=\"entry-material-wrap\"><span class=\"name\">冰醋栗</span></span><span class=\"amount\">*3</span></a></span><span class=\"custom-entry-wrapper\" data-entry-id=\"509310\" data-entry-ratio=\"small\" data-entry-img=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/12/183046623/8b9359c04f891f41247dfe521ad95fc4_5687272845493479739.png\" data-entry-name=\"冰星果\" data-entry-amount=\"2\" data-entry-link=\"/ys/obc/content/509310/detail?bbs_presentation_style=no_header\" data-entry-status=\"Online\" data-updated=\"0\"><a href=\"/ys/obc/content/509310/detail?bbs_presentation_style=no_header\" target=\"_blank\" class=\"entry-material-box entry-material-small\"><img class=\"image\" src=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/12/183046623/8b9359c04f891f41247dfe521ad95fc4_5687272845493479739.png\"><span class=\"entry-material-wrap\"><span class=\"name\">冰星果</span></span><span class=\"amount\">*2</span></a></span><span class=\"custom-entry-wrapper\" data-entry-id=\"509532\" data-entry-ratio=\"small\" data-entry-img=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/15/75610764/2c3a9946b05defdc52fd6551f88fc604_1064468176764828612.png\" data-entry-name=\"蜂蜜\" data-entry-amount=\"1\" data-entry-link=\"/ys/obc/content/509532/detail?bbs_presentation_style=no_header\" data-entry-status=\"Online\" data-updated=\"0\"><a href=\"/ys/obc/content/509532/detail?bbs_presentation_style=no_header\" target=\"_blank\" class=\"entry-material-box entry-material-small\"><img class=\"image\" src=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/15/75610764/2c3a9946b05defdc52fd6551f88fc604_1064468176764828612.png\"><span class=\"entry-material-wrap\"><span class=\"name\">蜂蜜</span></span><span class=\"amount\">*1</span></a></span><span class=\"custom-entry-wrapper\" data-entry-id=\"777\" data-entry-ratio=\"small\" data-entry-img=\"https://act-upload.mihoyo.com/ys-obc/2023/10/13/24077343/098cd7462a566c5ebb8d17d39bab79d6_2774656492092502168.png\" data-entry-name=\"糖\" data-entry-amount=\"1\" data-entry-link=\"/ys/obc/content/777/detail?bbs_presentation_style=no_header\" data-entry-status=\"Online\" data-updated=\"0\"><a href=\"/ys/obc/content/777/detail?bbs_presentation_style=no_header\" target=\"_blank\" class=\"entry-material-box entry-material-small\"><img class=\"image\" src=\"https://act-upload.mihoyo.com/ys-obc/2023/10/13/24077343/098cd7462a566c5ebb8d17d39bab79d6_2774656492092502168.png\"><span class=\"entry-material-wrap\"><span class=\"name\">糖</span></span><span class=\"amount\">*1</span></a></span></p>"
+      },
+      "attr": [
+       {
+        "key": "描述",
+        "value": [
+         "<p>沃雅妮莎的特色料理。缠绕着珍珠的古董高脚杯盛着梦幻透亮的果汁，轻轻摇晃杯身，液面泛起一层细密的微泡，升腾而后破碎，如同谁在水底吐出了一串笑声。如此奇妙... 难道是她在熬煮时哼唱的神秘曲调赋予的？</p>"
+        ]
+       },
+       {
+        "key": "使用效果",
+        "value": [
+         "<p>立即为选中的角色恢复生命值上限的34%，并在之后的30秒内，每5秒恢复980点生命值。</p>"
+        ]
+       },
+       {
+        "key": "获得方式",
+        "value": [
+         "<p>使用角色沃雅妮莎烹饪莫尔斯果酿</p>"
+        ]
+       },
+       {
+        "key": "食谱获得",
+        "value": [
+         "<p>至冬地区：<span class=\"custom-entry-wrapper\" data-entry-id=\"509513\" data-entry-ratio=\"text\" data-entry-img=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/14/178964736/30042a1f2e4212469386e40f8ff10691_2893284766273419259.png\" data-entry-name=\"齐良诺夫【「格瓦斯尼克」老板】\" data-entry-link=\"/ys/obc/content/509513/detail?bbs_presentation_style=no_header\" data-entry-status=\"Online\"><a href=\"/ys/obc/content/509513/detail?bbs_presentation_style=no_header\" target=\"_blank\" class=\"entry-material-box entry-material-text\"><span class=\"entry-material-wrap\"><span class=\"name\">齐良诺夫【「格瓦斯尼克」老板】</span></span></a></span></p>"
+        ]
+       }
+      ]
+     },
+     "style": ""
+    }
+   ],
+   "id": "10785",
+   "is_customize_name": true,
+   "is_abstract": false,
+   "is_show_switch": false,
+   "switch": false,
+   "desc": "",
+   "repeated": false,
+   "is_submodule": false,
+   "origin_module_id": "1172",
+   "without_border": false,
+   "can_delete": false,
+   "is_hidden": false,
+   "rich_text_editing": false
+  }
+ ]
+}

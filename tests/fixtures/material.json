@@ -1,0 +1,44 @@
+{
+ "name": "吞吞鲸",
+ "modules": [
+  {
+   "name": "",
+   "components": [
+    {
+     "component_id": "material_base_info",
+     "data": {
+      "name": "吞吞鲸",
+      "img": "https://act-upload.mihoyo.com/wiki-user-upload/2026/10/13/105506159/244ff961c17526527284006ba84877f9_7850039428805685050.png",
+      "star": 2,
+      "materials": {
+       "key": "获取方式",
+       "value": "<p>至冬世界任务  送给孩子们的礼物</p>"
+      },
+      "attr": [
+       {
+        "key": "描述",
+        "value": [
+         "<p>曾经在至冬的孩子们之间十分流行的玩具。它流行的原因并非是制作精良，而是在有趣的同时足够廉价。大多数孩子都买得到，也就有了和同伴一起玩要的机会。</p>"
+        ]
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "",
+   "components": [
+    {
+     "component_id": "collapse_panel",
+     "data": {
+      "rich_text": "<p></p>",
+      "switch": false,
+      "is_show_switch": true,
+      "without_border": false
+     }
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,167 @@
+{
+ "name": "荒坠的圣迹",
+ "modules": [
+  {
+   "name": "秘境信息",
+   "components": [
+    {
+     "component_id": "role_base_info",
+     "data": {
+      "moduleName": "秘境信息",
+      "layout_": "banner",
+      "name": "荒坠的圣迹",
+      "star": 0,
+      "role_attribute": "#B1968B",
+      "avatar_pc": "https://act-upload.mihoyo.com/wiki-user-upload/2026/08/12/76362111/b67c7b9987d3f1bec0ab75f66c4087d0_2571469057167500732.png",
+      "avatar_m": "https://act-upload.mihoyo.com/wiki-user-upload/2026/08/12/76362111/63b6d357eb0f30f359d22d8de9e74654_1672656356642303593.png",
+      "attr": [
+       {
+        "key": "类型",
+        "value": [
+         "角色天赋素材"
+        ]
+       },
+       {
+        "key": "是否可联机",
+        "value": [
+         "是"
+        ]
+       },
+       {
+        "key": "消耗",
+        "value": [
+         "原粹树脂 * 20"
+        ]
+       },
+       {
+        "key": "是否任务本",
+        "value": [
+         "否"
+        ]
+       }
+      ],
+      "baseInfoSwitchDisabled": false
+     }
+    }
+   ]
+  },
+  {
+   "name": "简述",
+   "components": [
+    {
+     "component_id": "multi_table",
+     "data": {
+      "tables": [
+       {
+        "tab_name": "荒坠的圣迹",
+        "header": [
+         ""
+        ],
+        "row": [
+         [
+          "<p>凡人无从追忆的遥古之时，曾有失去故国的妖灵于此筑起避世的圣所，渴慕以冷寂的苦修纾解死灭的苦痛。然而凡有血气之物，终将如灯火般消泯——数百个属于妖灵的纪元里，以泪水缅怀黄金国的子遗与无数未曾见证过旧日荣光的追随者如雪尘般相继殒逝，直至最后的隐修者也选择离去，只留下荒寒的静默。</p>"
+         ]
+        ]
+       },
+       {
+        "tab_name": "精通秘境：共观",
+        "header": [
+         ""
+        ],
+        "row": [
+         [
+          "<p>昔日妖灵筑起的圣所，如今却已被宵小之徒盘踞。</p><p>若能消灭徘徊于此的敌人，或许能获得令天赋成长的启示吧。</p>"
+         ]
+        ]
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "秘境位置",
+   "components": [
+    {
+     "component_id": "map_desc",
+     "data": {
+      "list": [
+       {
+        "tab_name": "秘境位置",
+        "image": "https://act-upload.mihoyo.com/wiki-user-upload/2026/08/12/76362111/f98f988d0ddd8b4f884cb2340a158ac6_1428618052871776811.png"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "秘境详情",
+   "components": [
+    {
+     "component_id": "multi_table",
+     "data": {
+      "tables": [
+       {
+        "tab_name": "精通秘境Ⅰ（lv38）",
+        "header": [
+         ""
+        ],
+        "row": [
+         [
+          "<p><strong>冒险等级要求</strong>：30</p><p><strong>地脉异常</strong>：角色触发超导、星超导反应后，或是造成星超导伤害时，在目标敌人位置释放冲击波，造成雷元素伤害。</p><p><strong>推荐元素</strong>：<span style=\"color: rgb(24, 144, 255)\">冰</span> <span style=\"color: rgb(114, 46, 209)\">雷</span></p>"
+         ],
+         [
+          "<p><strong>必定掉落奖励</strong></p><p><span class=\"custom-entry-wrapper\" data-entry-id=\"5565\" data-entry-ratio=\"small\" data-entry-img=\"https://act-upload.mihoyo.com/wiki-user-upload/2024/09/01/183046623/6ee632dc08f8146408597e4b9001fa98_2224664994602413930.png\" data-entry-name=\"冒险阅历\" data-entry-amount=\"100\" data-entry-link=\"无\" data-entry-status=\"Online\" data-updated=\"1\"><a href=\"%E6%97%A0\" target=\"_blank\" class=\"entry-material-box entry-material-small\"><img class=\"image\" src=\"https://act-upload.mihoyo.com/wiki-user-upload/2024/09/01/183046623/6ee632dc08f8146408597e4b9001fa98_2224664994602413930.png\"><span class=\"entry-material-wrap\"><span class=\"name\">冒险阅历</span></span><span class=\"amount\">*100</span></a></span><span class=\"custom-entry-wrapper\" data-entry-id=\"5565\" data-entry-ratio=\"small\" data-entry-img=\"https://uploadstatic.mihoyo.com/ys-obc/2022/12/08/160182379/605f7e564ce17decc9e09508567776ce_5737054899684571258.jpg\" data-entry-name=\"摩拉\" data-entry-amount=\"1575\" data-entry-link=\"/ys/obc/content/5565/detail?bbs_presentation_style=no_header\" data-entry-status=\"Online\" data-updated=\"0\"><a href=\"/ys/obc/content/5565/detail?bbs_presentation_style=no_header\" target=\"_blank\" class=\"entry-material-box entry-material-small\"><img class=\"image\" src=\"https://uploadstatic.mihoyo.com/ys-obc/2022/12/08/160182379/605f7e564ce17decc9e09508567776ce_5737054899684571258.jpg\"><span class=\"entry-material-wrap\"><span class=\"name\">摩拉</span></span><span class=\"amount\">*1575</span></a></span><span class=\"custom-entry-wrapper\" data-entry-id=\"5565\" data-entry-ratio=\"small\" data-entry-img=\"https://act-upload.mihoyo.com/wiki-user-upload/2024/09/01/183046623/6891d5ac5289f94623d17daf2a1e5821_7439591830422365344.png\" data-entry-name=\"好感经验\" data-entry-amount=\"15\" data-entry-link=\"无\" data-entry-status=\"Online\" data-updated=\"1\"><a href=\"%E6%97%A0\" target=\"_blank\" class=\"entry-material-box entry-material-small\"><img class=\"image\" src=\"https://act-upload.mihoyo.com/wiki-user-upload/2024/09/01/183046623/6891d5ac5289f94623d17daf2a1e5821_7439591830422365344.png\"><span class=\"entry-material-wrap\"><span class=\"name\">好感经验</span></span><span class=\"amount\">*15</span></a></span></p><p><strong>概率掉落奖励</strong></p><p>【周一/周四】：<span class=\"custom-entry-wrapper\" data-entry-id=\"509272\" data-entry-ratio=\"small\" data-entry-img=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/12/183046623/4ccc448ebe5b8520d89dc8ba7b89d99c_321980479142434267.png\" data-entry-name=\"「慈爱」的教导\" data-entry-link=\"/ys/obc/content/509272/detail?bbs_presentation_style=no_header\" data-entry-status=\"Online\"><a href=\"/ys/obc/content/509272/detail?bbs_presentation_style=no_header\" target=\"_blank\" class=\"entry-material-box entry-material-small\"><img class=\"image\" src=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/12/183046623/4ccc448ebe5b8520d89dc8ba7b89d99c_321980479142434267.png\"><span class=\"entry-material-wrap\"><span class=\"name\">「慈爱」的教导</span></span></a></span></p><p>【周二/周五】：<span class=\"custom-entry-wrapper\" data-entry-id=\"509266\" data-entry-ratio=\"small\" data-entry-img=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/12/183046623/66248818d50acbcca8d294c27d6c8e12_6395234309051101331.png\" data-entry-name=\"「坚忍」的教导\" data-entry-link=\"/ys/obc/content/509266/detail?bbs_presentation_style=no_header\" data-entry-status=\"Online\"><a href=\"/ys/obc/content/509266/detail?bbs_presentation_style=no_header\" target=\"_blank\" class=\"entry-material-box entry-material-small\"><img class=\"image\" src=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/12/183046623/66248818d50acbcca8d294c27d6c8e12_6395234309051101331.png\"><span class=\"entry-material-wrap\"><span class=\"name\">「坚忍」的教导</span></span></a></span></p><p>【周三/周六】：<span class=\"custom-entry-wrapper\" data-entry-id=\"509267\" data-entry-ratio=\"small\" data-entry-img=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/12/183046623/d7abeef00101bb4dd4a422a8468ecd3d_871814789248128854.png\" data-entry-name=\"「荣光」的教导\" data-entry-link=\"/ys/obc/content/509267/detail?bbs_presentation_style=no_header\" data-entry-status=\"Online\"><a href=\"/ys/obc/content/509267/detail?bbs_presentation_style=no_header\" target=\"_blank\" class=\"entry-material-box entry-material-small\"><img class=\"image\" src=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/12/183046623/d7abeef00101bb4dd4a422a8468ecd3d_871814789248128854.png\"><span class=\"entry-material-wrap\"><span class=\"name\">「荣光」的教导</span></span></a></span></p><p>【周日】以上全部开放</p>"
+         ]
+        ]
+       },
+       {
+        "tab_name": "精通秘境Ⅱ（lv54）",
+        "header": [
+         ""
+        ],
+        "row": [
+         [
+          "<p><strong>冒险等级要求</strong>：35</p><p><strong>地脉异常</strong>：角色触发超导、星超导反应后，或是造成星超导伤害时，在目标敌人位置释放冲击波，造成雷元素伤害。</p><p><strong>推荐元素</strong>：<span style=\"color: rgb(24, 144, 255)\">冰</span> <span style=\"color: rgb(114, 46, 209)\">雷</span></p>"
+         ],
+         [
+          "<p><strong>必定掉落奖励</strong></p><p><span class=\"custom-entry-wrapper\" data-entry-id=\"5565\" data-entry-ratio=\"small\" data-entry-img=\"https://act-upload.mihoyo.com/wiki-user-upload/2024/09/01/183046623/6ee632dc08f8146408597e4b9001fa98_2224664994602413930.png\" data-entry-name=\"冒险阅历\" data-entry-amount=\"100\" data-entry-link=\"无\" data-entry-status=\"Online\" data-updated=\"1\"><a href=\"%E6%97%A0\" target=\"_blank\" class=\"entry-material-box entry-material-small\"><img class=\"image\" src=\"https://act-upload.mihoyo.com/wiki-user-upload/2024/09/01/183046623/6ee632dc08f8146408597e4b9001fa98_2224664994602413930.png\"><span class=\"entry-material-wrap\"><span class=\"name\">冒险阅历</span></span><span class=\"amount\">*100</span></a></span><span class=\"custom-entry-wrapper\" data-entry-id=\"5565\" data-entry-ratio=\"small\" data-entry-img=\"https://uploadstatic.mihoyo.com/ys-obc/2022/12/08/160182379/605f7e564ce17decc9e09508567776ce_5737054899684571258.jpg\" data-entry-name=\"摩拉\" data-entry-amount=\"1800\" data-entry-link=\"/ys/obc/content/5565/detail?bbs_presentation_style=no_header\" data-entry-status=\"Online\" data-updated=\"0\"><a href=\"/ys/obc/content/5565/detail?bbs_presentation_style=no_header\" target=\"_blank\" class=\"entry-material-box entry-material-small\"><img class=\"image\" src=\"https://uploadstatic.mihoyo.com/ys-obc/2022/12/08/160182379/605f7e564ce17decc9e09508567776ce_5737054899684571258.jpg\"><span class=\"entry-material-wrap\"><span class=\"name\">摩拉</span></span><span class=\"amount\">*1800</span></a></span><span class=\"custom-entry-wrapper\" data-entry-id=\"5565\" data-entry-ratio=\"small\" data-entry-img=\"https://act-upload.mihoyo.com/wiki-user-upload/2024/09/01/183046623/6891d5ac5289f94623d17daf2a1e5821_7439591830422365344.png\" data-entry-name=\"好感经验\" data-entry-amount=\"15\" data-entry-link=\"无\" data-entry-status=\"Online\" data-updated=\"1\"><a href=\"%E6%97%A0\" target=\"_blank\" class=\"entry-material-box entry-material-small\"><img class=\"image\" src=\"https://act-upload.mihoyo.com/wiki-user-upload/2024/09/01/183046623/6891d5ac5289f94623d17daf2a1e5821_7439591830422365344.png\"><span class=\"entry-material-wrap\"><span class=\"name\">好感经验</span></span><span class=\"amount\">*15</span></a></span></p><p><strong>概率掉落奖励</strong></p><p>【周一/周四】：<span class=\"custom-entry-wrapper\" data-entry-id=\"509272\" data-entry-ratio=\"small\" data-entry-img=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/12/183046623/4ccc448ebe5b8520d89dc8ba7b89d99c_321980479142434267.png\" data-entry-name=\"「慈爱」的教导\" data-entry-link=\"/ys/obc/content/509272/detail?bbs_presentation_style=no_header\" data-entry-status=\"Online\"><a href=\"/ys/obc/content/509272/detail?bbs_presentation_style=no_header\" target=\"_blank\" class=\"entry-material-box entry-material-small\"><img class=\"image\" src=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/12/183046623/4ccc448ebe5b8520d89dc8ba7b89d99c_321980479142434267.png\"><span class=\"entry-material-wrap\"><span class=\"name\">「慈爱」的教导</span></span></a></span><span class=\"custom-entry-wrapper\" data-entry-id=\"509271\" data-entry-ratio=\"small\" data-entry-img=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/12/183046623/a17d5d79796308736337ee45dfa4b34e_2243798103568777934.png\" data-entry-name=\"「慈爱」的指引\" data-entry-link=\"/ys/obc/content/509271/detail?bbs_presentation_style=no_header\" data-entry-status=\"Online\"><a href=\"/ys/obc/content/509271/detail?bbs_presentation_style=no_header\" target=\"_blank\" class=\"entry-material-box entry-material-small\"><img class=\"image\" src=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/12/183046623/a17d5d79796308736337ee45dfa4b34e_2243798103568777934.png\"><span class=\"entry-material-wrap\"><span class=\"name\">「慈爱」的指引</span></span></a></span></p><p>【周二/周五】：<span class=\"custom-entry-wrapper\" data-entry-id=\"509266\" data-entry-ratio=\"small\" data-entry-img=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/12/183046623/66248818d50acbcca8d294c27d6c8e12_6395234309051101331.png\" data-entry-name=\"「坚忍」的教导\" data-entry-link=\"/ys/obc/content/509266/detail?bbs_presentation_style=no_header\" data-entry-status=\"Online\"><a href=\"/ys/obc/content/509266/detail?bbs_presentation_style=no_header\" target=\"_blank\" class=\"entry-material-box entry-material-small\"><img class=\"image\" src=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/12/183046623/66248818d50acbcca8d294c27d6c8e12_6395234309051101331.png\"><span class=\"entry-material-wrap\"><span class=\"name\">「坚忍」的教导</span></span></a></span><span class=\"custom-entry-wrapper\" data-entry-id=\"509265\" data-entry-ratio=\"small\" data-entry-img=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/12/183046623/9dca679ebf4d4bada1260aff85798116_4307483940153861081.png\" data-entry-name=\"「坚忍」的指引\" data-entry-link=\"/ys/obc/content/509265/detail?bbs_presentation_style=no_header\" data-entry-status=\"Online\"><a href=\"/ys/obc/content/509265/detail?bbs_presentation_style=no_header\" target=\"_blank\" class=\"entry-material-box entry-material-small\"><img class=\"image\" src=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/12/183046623/9dca679ebf4d4bada1260aff85798116_4307483940153861081.png\"><span class=\"entry-material-wrap\"><span class=\"name\">「坚忍」的指引</span></span></a></span></p><p>【周三/周六】：<span class=\"custom-entry-wrapper\" data-entry-id=\"509267\" data-entry-ratio=\"small\" data-entry-img=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/12/183046623/d7abeef00101bb4dd4a422a8468ecd3d_871814789248128854.png\" data-entry-name=\"「荣光」的教导\" data-entry-link=\"/ys/obc/content/509267/detail?bbs_presentation_style=no_header\" data-entry-status=\"Online\"><a href=\"/ys/obc/content/509267/detail?bbs_presentation_style=no_header\" target=\"_blank\" class=\"entry-material-box entry-material-small\"><img class=\"image\" src=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/12/183046623/d7abeef00101bb4dd4a422a8468ecd3d_871814789248128854.png\"><span class=\"entry-material-wrap\"><span class=\"name\">「荣光」的教导</span></span></a></span><span class=\"custom-entry-wrapper\" data-entry-id=\"509269\" data-entry-ratio=\"small\" data-entry-img=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/12/183046623/d7968540ed2a61a3d1b6614adc56de81_6118889641987955718.png\" data-entry-name=\"「荣光」的指引\" data-entry-link=\"/ys/obc/content/509269/detail?bbs_presentation_style=no_header\" data-entry-status=\"Online\"><a href=\"/ys/obc/content/509269/detail?bbs_presentation_style=no_header\" target=\"_blank\" class=\"entry-material-box entry-material-small\"><img class=\"image\" src=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/12/183046623/d7968540ed2a61a3d1b6614adc56de81_6118889641987955718.png\"><span class=\"entry-material-wrap\"><span class=\"name\">「荣光」的指引</span></span></a></span></p><p>【周日】以上全部开放</p>"
+         ]
+        ]
+       },
+       {
+        "tab_name": "精通秘境Ⅲ（lv71）",
+        "header": [
+         ""
+        ],
+        "row": [
+         [
+          "<p><strong>冒险等级要求</strong>：40</p><p><strong>地脉异常</strong>：角色触发超导、星超导反应后，或是造成星超导伤害时，在目标敌人位置释放冲击波，造成雷元素伤害。</p><p><strong>挑战特性</strong>：角色触发超导、星超导反应时，或是造成星超导反应伤害时，将会释放冲击波，对敌人造成更多伤害，利用这一效果，可以更有效地应对挑战。</p><p><strong>推荐元素</strong>：<span style=\"color: rgb(24, 144, 255)\">冰</span> <span style=\"color: rgb(114, 46, 209)\">雷</span></p>"
+         ],
+         [
+          "<p><strong>必定掉落奖励</strong></p><p><span class=\"custom-entry-wrapper\" data-entry-id=\"5565\" data-entry-ratio=\"small\" data-entry-img=\"https://act-upload.mihoyo.com/wiki-user-upload/2024/09/01/183046623/6ee632dc08f8146408597e4b9001fa98_2224664994602413930.png\" data-entry-name=\"冒险阅历\" data-entry-amount=\"100\" data-entry-link=\"无\" data-entry-status=\"Online\" data-updated=\"1\"><a href=\"%E6%97%A0\" target=\"_blank\" class=\"entry-material-box entry-material-small\"><img class=\"image\" src=\"https://act-upload.mihoyo.com/wiki-user-upload/2024/09/01/183046623/6ee632dc08f8146408597e4b9001fa98_2224664994602413930.png\"><span class=\"entry-material-wrap\"><span class=\"name\">冒险阅历</span></span><span class=\"amount\">*100</span></a></span><span class=\"custom-entry-wrapper\" data-entry-id=\"5565\" data-entry-ratio=\"small\" data-entry-img=\"https://uploadstatic.mihoyo.com/ys-obc/2022/12/08/160182379/605f7e564ce17decc9e09508567776ce_5737054899684571258.jpg\" data-entry-name=\"摩拉\" data-entry-amount=\"2025\" data-entry-link=\"/ys/obc/content/5565/detail?bbs_presentation_style=no_header\" data-entry-status=\"Online\" data-updated=\"0\"><a href=\"/ys/obc/content/5565/detail?bbs_presentation_style=no_header\" target=\"_blank\" class=\"entry-material-box entry-material-small\"><img class=\"image\" src=\"https://uploadstatic.mihoyo.com/ys-obc/2022/12/08/160182379/605f7e564ce17decc9e09508567776ce_5737054899684571258.jpg\"><span class=\"entry-material-wrap\"><span class=\"name\">摩拉</span></span><span class=\"amount\">*2025</span></a></span><span class=\"custom-entry-wrapper\" data-entry-id=\"5565\" data-entry-ratio=\"small\" data-entry-img=\"https://act-upload.mihoyo.com/wiki-user-upload/2024/09/01/183046623/6891d5ac5289f94623d17daf2a1e5821_7439591830422365344.png\" data-entry-name=\"好感经验\" data-entry-amount=\"20\" data-entry-link=\"无\" data-entry-status=\"Online\" data-updated=\"1\"><a href=\"%E6%97%A0\" target=\"_blank\" class=\"entry-material-box entry-material-small\"><img class=\"image\" src=\"https://act-upload.mihoyo.com/wiki-user-upload/2024/09/01/183046623/6891d5ac5289f94623d17daf2a1e5821_7439591830422365344.png\"><span class=\"entry-material-wrap\"><span class=\"name\">好感经验</span></span><span class=\"amount\">*20</span></a></span></p><p><strong>概率掉落奖励</strong></p><p>【周一/周四】：<span class=\"custom-entry-wrapper\" data-entry-id=\"509272\" data-entry-ratio=\"small\" data-entry-img=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/12/183046623/4ccc448ebe5b8520d89dc8ba7b89d99c_321980479142434267.png\" data-entry-name=\"「慈爱」的教导\" data-entry-link=\"/ys/obc/content/509272/detail?bbs_presentation_style=no_header\" data-entry-status=\"Online\"><a href=\"/ys/obc/content/509272/detail?bbs_presentation_style=no_header\" target=\"_blank\" class=\"entry-material-box entry-material-small\"><img class=\"image\" src=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/12/183046623/4ccc448ebe5b8520d89dc8ba7b89d99c_321980479142434267.png\"><span class=\"entry-material-wrap\"><span class=\"name\">「慈爱」的教导</span></span></a></span><span class=\"custom-entry-wrapper\" data-entry-id=\"509271\" data-entry-ratio=\"small\" data-entry-img=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/12/183046623/a17d5d79796308736337ee45dfa4b34e_2243798103568777934.png\" data-entry-name=\"「慈爱」的指引\" data-entry-link=\"/ys/obc/content/509271/detail?bbs_presentation_style=no_header\" data-entry-status=\"Online\"><a href=\"/ys/obc/content/509271/detail?bbs_presentation_style=no_header\" target=\"_blank\" class=\"entry-material-box entry-material-small\"><img class=\"image\" src=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/12/183046623/a17d5d79796308736337ee45dfa4b34e_2243798103568777934.png\"><span class=\"entry-material-wrap\"><span class=\"name\">「慈爱」的指引</span></span></a></span></p><p>【周二/周五】：<span class=\"custom-entry-wrapper\" data-entry-id=\"509266\" data-entry-ratio=\"small\" data-entry-img=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/12/183046623/66248818d50acbcca8d294c27d6c8e12_6395234309051101331.png\" data-entry-name=\"「坚忍」的教导\" data-entry-link=\"/ys/obc/content/509266/detail?bbs_presentation_style=no_header\" data-entry-status=\"Online\"><a href=\"/ys/obc/content/509266/detail?bbs_presentation_style=no_header\" target=\"_blank\" class=\"entry-material-box entry-material-small\"><img class=\"image\" src=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/12/183046623/66248818d50acbcca8d294c27d6c8e12_6395234309051101331.png\"><span class=\"entry-material-wrap\"><span class=\"name\">「坚忍」的教导</span></span></a></span><span class=\"custom-entry-wrapper\" data-entry-id=\"509265\" data-entry-ratio=\"small\" data-entry-img=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/12/183046623/9dca679ebf4d4bada1260aff85798116_4307483940153861081.png\" data-entry-name=\"「坚忍」的指引\" data-entry-link=\"/ys/obc/content/509265/detail?bbs_presentation_style=no_header\" data-entry-status=\"Online\"><a href=\"/ys/obc/content/509265/detail?bbs_presentation_style=no_header\" target=\"_blank\" class=\"entry-material-box entry-material-small\"><img class=\"image\" src=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/12/183046623/9dca679ebf4d4bada1260aff85798116_4307483940153861081.png\"><span class=\"entry-material-wrap\"><span class=\"name\">「坚忍」的指引</span></span></a></span></p><p>【周三/周六】：<span class=\"custom-entry-wrapper\" data-entry-id=\"509267\" data-entry-ratio=\"small\" data-entry-img=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/12/183046623/d7abeef00101bb4dd4a422a8468ecd3d_871814789248128854.png\" data-entry-name=\"「荣光」的教导\" data-entry-link=\"/ys/obc/content/509267/detail?bbs_presentation_style=no_header\" data-entry-status=\"Online\"><a href=\"/ys/obc/content/509267/detail?bbs_presentation_style=no_header\" target=\"_blank\" class=\"entry-material-box entry-material-small\"><img class=\"image\" src=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/12/183046623/d7abeef00101bb4dd4a422a8468ecd3d_871814789248128854.png\"><span class=\"entry-material-wrap\"><span class=\"name\">「荣光」的教导</span></span></a></span><span class=\"custom-entry-wrapper\" data-entry-id=\"509269\" data-entry-ratio=\"small\" data-entry-img=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/12/183046623/d7968540ed2a61a3d1b6614adc56de81_6118889641987955718.png\" data-entry-name=\"「荣光」的指引\" data-entry-link=\"/ys/obc/content/509269/detail?bbs_presentation_style=no_header\" data-entry-status=\"Online\"><a href=\"/ys/obc/content/509269/detail?bbs_presentation_style=no_header\" target=\"_blank\" class=\"entry-material-box entry-material-small\"><img class=\"image\" src=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/12/183046623/d7968540ed2a61a3d1b6614adc56de81_6118889641987955718.png\"><span class=\"entry-material-wrap\"><span class=\"name\">「荣光」的指引</span></span></a></span></p><p>【周日】以上全部开放</p>"
+         ]
+        ]
+       },
+       {
+        "tab_name": "精通秘境Ⅳ（lv88）",
+        "header": [
+         ""
+        ],
+        "row": [
+         [
+          "<p><strong>冒险等级要求</strong>：45</p><p><strong>地脉异常</strong>：角色触发超导、星超导反应后，或是造成星超导伤害时，在目标敌人位置释放冲击波，造成雷元素伤害。</p><p><strong>挑战特性</strong>：角色触发超导、星超导反应时，或是造成星超导反应伤害时，将会释放冲击波，对敌人造成更多伤害，利用这一效果，可以更有效地应对挑战。</p><p><strong>推荐元素</strong>：<span style=\"color: rgb(24, 144, 255)\">冰</span> <span style=\"color: rgb(114, 46, 209)\">雷</span></p>"
+         ],
+         [
+          "<p><strong>必定掉落奖励</strong></p><p><span class=\"custom-entry-wrapper\" data-entry-id=\"5565\" data-entry-ratio=\"small\" data-entry-img=\"https://act-upload.mihoyo.com/wiki-user-upload/2024/09/01/183046623/6ee632dc08f8146408597e4b9001fa98_2224664994602413930.png\" data-entry-name=\"冒险阅历\" data-entry-amount=\"100\" data-entry-link=\"无\" data-entry-status=\"Online\" data-updated=\"1\"><a href=\"%E6%97%A0\" target=\"_blank\" class=\"entry-material-box entry-material-small\"><img class=\"image\" src=\"https://act-upload.mihoyo.com/wiki-user-upload/2024/09/01/183046623/6ee632dc08f8146408597e4b9001fa98_2224664994602413930.png\"><span class=\"entry-material-wrap\"><span class=\"name\">冒险阅历</span></span><span class=\"amount\">*100</span></a></span><span class=\"custom-entry-wrapper\" data-entry-id=\"5565\" data-entry-ratio=\"small\" data-entry-img=\"https://uploadstatic.mihoyo.com/ys-obc/2022/12/08/160182379/605f7e564ce17decc9e09508567776ce_5737054899684571258.jpg\" data-entry-name=\"摩拉\" data-entry-amount=\"2375\" data-entry-link=\"/ys/obc/content/5565/detail?bbs_presentation_style=no_header\" data-entry-status=\"Online\" data-updated=\"0\"><a href=\"/ys/obc/content/5565/detail?bbs_presentation_style=no_header\" target=\"_blank\" class=\"entry-material-box entry-material-small\"><img class=\"image\" src=\"https://uploadstatic.mihoyo.com/ys-obc/2022/12/08/160182379/605f7e564ce17decc9e09508567776ce_5737054899684571258.jpg\"><span class=\"entry-material-wrap\"><span class=\"name\">摩拉</span></span><span class=\"amount\">*2375</span></a></span><span class=\"custom-entry-wrapper\" data-entry-id=\"5565\" data-entry-ratio=\"small\" data-entry-img=\"https://act-upload.mihoyo.com/wiki-user-upload/2024/09/01/183046623/6891d5ac5289f94623d17daf2a1e5821_7439591830422365344.png\" data-entry-name=\"好感经验\" data-entry-amount=\"20\" data-entry-link=\"无\" data-entry-status=\"Online\" data-updated=\"1\"><a href=\"%E6%97%A0\" target=\"_blank\" class=\"entry-material-box entry-material-small\"><img class=\"image\" src=\"https://act-upload.mihoyo.com/wiki-user-upload/2024/09/01/183046623/6891d5ac5289f94623d17daf2a1e5821_7439591830422365344.png\"><span class=\"entry-material-wrap\"><span class=\"name\">好感经验</span></span><span class=\"amount\">*20</span></a></span></p><p><strong>概率掉落奖励</strong></p><p>【周一/周四】：<span class=\"custom-entry-wrapper\" data-entry-id=\"509272\" data-entry-ratio=\"small\" data-entry-img=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/12/183046623/4ccc448ebe5b8520d89dc8ba7b89d99c_321980479142434267.png\" data-entry-name=\"「慈爱」的教导\" data-entry-link=\"/ys/obc/content/509272/detail?bbs_presentation_style=no_header\" data-entry-status=\"Online\"><a href=\"/ys/obc/content/509272/detail?bbs_presentation_style=no_header\" target=\"_blank\" class=\"entry-material-box entry-material-small\"><img class=\"image\" src=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/12/183046623/4ccc448ebe5b8520d89dc8ba7b89d99c_321980479142434267.png\"><span class=\"entry-material-wrap\"><span class=\"name\">「慈爱」的教导</span></span></a></span><span class=\"custom-entry-wrapper\" data-entry-id=\"509271\" data-entry-ratio=\"small\" data-entry-img=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/12/183046623/a17d5d79796308736337ee45dfa4b34e_2243798103568777934.png\" data-entry-name=\"「慈爱」的指引\" data-entry-link=\"/ys/obc/content/509271/detail?bbs_presentation_style=no_header\" data-entry-status=\"Online\"><a href=\"/ys/obc/content/509271/detail?bbs_presentation_style=no_header\" target=\"_blank\" class=\"entry-material-box entry-material-small\"><img class=\"image\" src=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/12/183046623/a17d5d79796308736337ee45dfa4b34e_2243798103568777934.png\"><span class=\"entry-material-wrap\"><span class=\"name\">「慈爱」的指引</span></span></a></span><span class=\"custom-entry-wrapper\" data-entry-id=\"509270\" data-entry-ratio=\"small\" data-entry-img=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/12/183046623/b50ecbf381d6380252a18e4fbfbe9001_1765036464845447059.png\" data-entry-name=\"「慈爱」的哲学\" data-entry-link=\"/ys/obc/content/509270/detail?bbs_presentation_style=no_header\" data-entry-status=\"Online\"><a href=\"/ys/obc/content/509270/detail?bbs_presentation_style=no_header\" target=\"_blank\" class=\"entry-material-box entry-material-small\"><img class=\"image\" src=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/12/183046623/b50ecbf381d6380252a18e4fbfbe9001_1765036464845447059.png\"><span class=\"entry-material-wrap\"><span class=\"name\">「慈爱」的哲学</span></span></a></span></p><p>【周二/周五】：<span class=\"custom-entry-wrapper\" data-entry-id=\"509266\" data-entry-ratio=\"small\" data-entry-img=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/12/183046623/66248818d50acbcca8d294c27d6c8e12_6395234309051101331.png\" data-entry-name=\"「坚忍」的教导\" data-entry-link=\"/ys/obc/content/509266/detail?bbs_presentation_style=no_header\" data-entry-status=\"Online\"><a href=\"/ys/obc/content/509266/detail?bbs_presentation_style=no_header\" target=\"_blank\" class=\"entry-material-box entry-material-small\"><img class=\"image\" src=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/12/183046623/66248818d50acbcca8d294c27d6c8e12_6395234309051101331.png\"><span class=\"entry-material-wrap\"><span class=\"name\">「坚忍」的教导</span></span></a></span><span class=\"custom-entry-wrapper\" data-entry-id=\"509265\" data-entry-ratio=\"small\" data-entry-img=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/12/183046623/9dca679ebf4d4bada1260aff85798116_4307483940153861081.png\" data-entry-name=\"「坚忍」的指引\" data-entry-link=\"/ys/obc/content/509265/detail?bbs_presentation_style=no_header\" data-entry-status=\"Online\"><a href=\"/ys/obc/content/509265/detail?bbs_presentation_style=no_header\" target=\"_blank\" class=\"entry-material-box entry-material-small\"><img class=\"image\" src=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/12/183046623/9dca679ebf4d4bada1260aff85798116_4307483940153861081.png\"><span class=\"entry-material-wrap\"><span class=\"name\">「坚忍」的指引</span></span></a></span><span class=\"custom-entry-wrapper\" data-entry-id=\"509264\" data-entry-ratio=\"small\" data-entry-img=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/12/183046623/ef9650a6e66cdf1d9d08e3f0ae1d192b_1367743713217942716.png\" data-entry-name=\"「坚忍」的哲学\" data-entry-link=\"/ys/obc/content/509264/detail?bbs_presentation_style=no_header\" data-entry-status=\"Online\"><a href=\"/ys/obc/content/509264/detail?bbs_presentation_style=no_header\" target=\"_blank\" class=\"entry-material-box entry-material-small\"><img class=\"image\" src=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/12/183046623/ef9650a6e66cdf1d9d08e3f0ae1d192b_1367743713217942716.png\"><span class=\"entry-material-wrap\"><span class=\"name\">「坚忍」的哲学</span></span></a></span></p><p>【周三/周六】：<span class=\"custom-entry-wrapper\" data-entry-id=\"509267\" data-entry-ratio=\"small\" data-entry-img=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/12/183046623/d7abeef00101bb4dd4a422a8468ecd3d_871814789248128854.png\" data-entry-name=\"「荣光」的教导\" data-entry-link=\"/ys/obc/content/509267/detail?bbs_presentation_style=no_header\" data-entry-status=\"Online\"><a href=\"/ys/obc/content/509267/detail?bbs_presentation_style=no_header\" target=\"_blank\" class=\"entry-material-box entry-material-small\"><img class=\"image\" src=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/12/183046623/d7abeef00101bb4dd4a422a8468ecd3d_871814789248128854.png\"><span class=\"entry-material-wrap\"><span class=\"name\">「荣光」的教导</span></span></a></span><span class=\"custom-entry-wrapper\" data-entry-id=\"509269\" data-entry-ratio=\"small\" data-entry-img=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/12/183046623/d7968540ed2a61a3d1b6614adc56de81_6118889641987955718.png\" data-entry-name=\"「荣光」的指引\" data-entry-link=\"/ys/obc/content/509269/detail?bbs_presentation_style=no_header\" data-entry-status=\"Online\"><a href=\"/ys/obc/content/509269/detail?bbs_presentation_style=no_header\" target=\"_blank\" class=\"entry-material-box entry-material-small\"><img class=\"image\" src=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/12/183046623/d7968540ed2a61a3d1b6614adc56de81_6118889641987955718.png\"><span class=\"entry-material-wrap\"><span class=\"name\">「荣光」的指引</span></span></a></span><span class=\"custom-entry-wrapper\" data-entry-id=\"509268\" data-entry-ratio=\"small\" data-entry-img=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/12/183046623/90e65ae05707b0e9a171a81f340d395c_8920726285670002317.png\" data-entry-name=\"「荣光」的哲学\" data-entry-link=\"/ys/obc/content/509268/detail?bbs_presentation_style=no_header\" data-entry-status=\"Online\"><a href=\"/ys/obc/content/509268/detail?bbs_presentation_style=no_header\" target=\"_blank\" class=\"entry-material-box entry-material-small\"><img class=\"image\" src=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/12/183046623/90e65ae05707b0e9a171a81f340d395c_8920726285670002317.png\"><span class=\"entry-material-wrap\"><span class=\"name\">「荣光」的哲学</span></span></a></span></p><p>【周日】以上全部开放</p>"
+         ]
+        ]
+       }
+      ]
+     }
+    }
+   ]
+  }
+ ]
+}

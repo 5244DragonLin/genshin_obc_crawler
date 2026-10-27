@@ -1,0 +1,19 @@
+{
+ "name": "至冬·冰沫",
+ "modules": [
+  {
+   "name": "至冬·冰沫",
+   "components": [
+    {
+     "component_id": "business_card",
+     "data": {
+      "moduleName": "",
+      "layout_": "banner",
+      "long_img": "https://act-upload.mihoyo.com/wiki-user-upload/2026/09/23/4905523/a1730755ec07ddd906f65619e64e6312_8908467910266532980.png",
+      "card_img": "https://act-upload.mihoyo.com/wiki-user-upload/2026/09/23/4905523/80a2849a2f1c6ef04c47e7558c4dd6a8_5732589609440933918.png"
+     }
+    }
+   ]
+  }
+ ]
+}

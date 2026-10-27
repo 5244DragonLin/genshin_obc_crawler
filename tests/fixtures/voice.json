@@ -1,0 +1,128 @@
+{
+ "name": "旅行者语音展示（空）",
+ "modules": [
+  {
+   "name": "配音展示",
+   "components": [
+    {
+     "component_id": "role_voice",
+     "data": {
+      "moduleName": "配音展示",
+      "layout_": "banner",
+      "list": [
+       {
+        "tab_name": "汉语",
+        "table": [
+         {
+          "name": "元素战技·其一",
+          "content": "…喝！",
+          "audio_url": "https://act-upload.mihoyo.com/wiki-user-upload/2025/06/24/80663279/c9b365741e02806bd25838887dbd31d1_8708805590642903399.mp3",
+          "isUploading": false,
+          "audio_name": "61元素战技·其一_cn.mp3"
+         },
+         {
+          "name": "元素战技·其二",
+          "content": "…哈！",
+          "audio_url": "https://act-upload.mihoyo.com/wiki-user-upload/2025/06/24/80663279/c16da974f6e96bf2747ed085238e16ec_4353785934018856502.mp3",
+          "isUploading": false,
+          "audio_name": "62元素战技·其二_cn.mp3"
+         },
+         {
+          "name": "元素战技·其三",
+          "content": "风刃！",
+          "audio_url": "https://act-upload.mihoyo.com/wiki-user-upload/2025/06/24/80663279/78ea346e1d7537409028f3a3205f1b16_34279143145827635.mp3",
+          "isUploading": false,
+          "audio_name": "63元素战技·其三_cn.mp3"
+         }
+        ],
+        "tab_id": "1750324219407_0"
+       },
+       {
+        "tab_name": "日语",
+        "table": [
+         {
+          "name": "元素战技·其一",
+          "content": "…喝！",
+          "audio_url": "https://act-upload.mihoyo.com/wiki-user-upload/2025/06/24/80663279/59bb65f4826b27ad92de5fbe9fa5be98_4328270776630027193.mp3",
+          "isUploading": false,
+          "audio_name": "61元素战技·其一_jp.mp3"
+         },
+         {
+          "name": "元素战技·其二",
+          "content": "…哈！",
+          "audio_url": "https://act-upload.mihoyo.com/wiki-user-upload/2025/06/24/80663279/974fcbd9709944239d179fc87423d543_6675773838988952463.mp3",
+          "isUploading": false,
+          "audio_name": "62元素战技·其二_jp.mp3"
+         },
+         {
+          "name": "元素战技·其三",
+          "content": "风刃！",
+          "audio_url": "https://act-upload.mihoyo.com/wiki-user-upload/2025/06/24/80663279/5178d494da43ba99dbbd5e6046e38e75_2910983913545924336.mp3",
+          "isUploading": false,
+          "audio_name": "63元素战技·其三_jp.mp3"
+         }
+        ],
+        "tab_id": "1750685449150_3"
+       },
+       {
+        "tab_name": "英语",
+        "table": [
+         {
+          "name": "元素战技·其一",
+          "content": "…喝！",
+          "audio_url": "https://act-upload.mihoyo.com/wiki-user-upload/2025/06/25/80663279/4bc16b93672fef79bb8ddd2654b33e31_7372911216532311656.mp3",
+          "isUploading": false,
+          "audio_name": "61元素战技·其一_en.mp3"
+         },
+         {
+          "name": "元素战技·其二",
+          "content": "…哈！",
+          "audio_url": "https://act-upload.mihoyo.com/wiki-user-upload/2025/06/25/80663279/6cab6c2a787e1c037c3a22c2209d023a_7355985705395329020.mp3",
+          "isUploading": false,
+          "audio_name": "62元素战技·其二_en.mp3"
+         },
+         {
+          "name": "元素战技·其三",
+          "content": "风刃！",
+          "audio_url": "https://act-upload.mihoyo.com/wiki-user-upload/2025/06/25/80663279/fef6f31c34cf2aab3186361645d3fc1c_1393187231925820186.mp3",
+          "isUploading": false,
+          "audio_name": "63元素战技·其三_en.mp3"
+         }
+        ],
+        "tab_id": "1750685447010_2"
+       },
+       {
+        "tab_name": "韩语",
+        "table": [
+         {
+          "name": "元素战技·其一",
+          "content": "…喝！",
+          "audio_url": "https://act-upload.mihoyo.com/wiki-user-upload/2025/06/29/80663279/4399832f490bf8acc4676ec4e496d995_4389379710284228179.mp3",
+          "isUploading": false,
+          "audio_name": "61元素战技·其一_kr.mp3"
+         },
+         {
+          "name": "元素战技·其二",
+          "content": "…哈！",
+          "audio_url": "https://act-upload.mihoyo.com/wiki-user-upload/2025/06/29/80663279/398426c763647fde4fc11923d4a54ba8_766882299782831039.mp3",
+          "isUploading": false,
+          "audio_name": "62元素战技·其二_kr.mp3"
+         },
+         {
+          "name": "元素战技·其三",
+          "content": "风刃！",
+          "audio_url": "https://act-upload.mihoyo.com/wiki-user-upload/2025/06/29/80663279/4aaf92f154b70d588a26c37ce2fb5309_3994020202760744178.mp3",
+          "isUploading": false,
+          "audio_name": "63元素战技·其三_kr.mp3"
+         }
+        ],
+        "tab_id": "1750685444809_1"
+       }
+      ],
+      "baseInfoSwitchDisabled": false
+     }
+    }
+   ]
+  }
+ ]
+}

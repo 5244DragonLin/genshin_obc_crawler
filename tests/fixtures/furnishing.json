@@ -1,0 +1,88 @@
+{
+ "name": "「常伴梦乡」",
+ "modules": [
+  {
+   "name": "基础信息",
+   "components": [
+    {
+     "component_id": "cave_base_info",
+     "data": {
+      "name": "「常伴梦乡」",
+      "image": "https://act-upload.mihoyo.com/wiki-user-upload/2026/10/05/50494840/c844261f6e11fb5b337619d8abe7a301_2405679136041469756.png",
+      "rate": 3,
+      "materials": "<p><span class=\"custom-entry-wrapper\" data-entry-id=\"725\" data-entry-ratio=\"small\" data-entry-img=\"https://uploadstatic.mihoyo.com/ys-obc/2020/07/01/80410800/ec90920056d754049efb1eda9776d0b4_1571172841746578465.png\" data-entry-name=\"铁块\" data-entry-amount=\"6\" data-entry-link=\"/ys/obc/content/725/detail?bbs_presentation_style=no_header\" data-entry-status=\"Online\" data-updated=\"0\"><a href=\"/ys/obc/content/725/detail?bbs_presentation_style=no_header\" target=\"_blank\" class=\"entry-material-box entry-material-small\"><img class=\"image\" src=\"https://uploadstatic.mihoyo.com/ys-obc/2020/07/01/80410800/ec90920056d754049efb1eda9776d0b4_1571172841746578465.png\"><span class=\"entry-material-wrap\"><span class=\"name\">铁块</span></span><span class=\"amount\">*6</span></a></span><span class=\"custom-entry-wrapper\" data-entry-id=\"726\" data-entry-ratio=\"small\" data-entry-img=\"https://uploadstatic.mihoyo.com/ys-obc/2020/07/01/80410800/456d476be824d6c157bb0febdcfd231d_8583465196632937227.png\" data-entry-name=\"白铁块\" data-entry-amount=\"2\" data-entry-link=\"/ys/obc/content/726/detail?bbs_presentation_style=no_header\" data-entry-status=\"Online\" data-updated=\"0\"><a href=\"/ys/obc/content/726/detail?bbs_presentation_style=no_header\" target=\"_blank\" class=\"entry-material-box entry-material-small\"><img class=\"image\" src=\"https://uploadstatic.mihoyo.com/ys-obc/2020/07/01/80410800/456d476be824d6c157bb0febdcfd231d_8583465196632937227.png\"><span class=\"entry-material-wrap\"><span class=\"name\">白铁块</span></span><span class=\"amount\">*2</span></a></span></p>"
+     }
+    }
+   ]
+  },
+  {
+   "name": "物品描述",
+   "components": [
+    {
+     "component_id": "good_desc",
+     "data": {
+      "rich_text": "<p>造型精致的立式烛台，常见于雪孃馆，烛臂弯曲优雅，其上的蜡烛总是静静地散发着温柔的光芒。</p><p>在每一个安静的夜里，烛芯燃烧时发出细微的噼啪声，能够给周围带来温馨的氛围，使得屋内的人安心进入梦乡…</p>",
+      "attr": [
+       {
+        "key": "摆设获取途径：",
+        "value": [
+         "<p>制作</p>"
+        ]
+       },
+       {
+        "key": "摆设图纸获取途径：",
+        "value": [
+         "<p>至冬地区奇馈宝箱奖励</p>"
+        ]
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "基础属性",
+   "components": [
+    {
+     "component_id": "rich_base_info",
+     "data": {
+      "list": [
+       {
+        "key": "洞天仙力\t",
+        "value": [
+         "<p>60</p>"
+        ]
+       },
+       {
+        "key": "摆放区域\t",
+        "value": [
+         "<p>室内</p>"
+        ]
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "地图说明",
+   "components": [
+    {
+     "component_id": "map_desc",
+     "data": {
+      "list": [
+       {
+        "tab_name": "实机展示",
+        "image": "https://act-upload.mihoyo.com/wiki-user-upload/2026/10/05/50494840/3cd23cbc08bb06ef0cb86496c25c3bb0_2565298246607837102.png"
+       },
+       {
+        "tab_name": "地图位置",
+        "image": "https://act-upload.mihoyo.com/wiki-user-upload/2026/10/05/50494840/7654d29877006f5795b9ab3d7936ffad_3266194920765687981.png"
+       }
+      ]
+     }
+    }
+   ]
+  }
+ ]
+}

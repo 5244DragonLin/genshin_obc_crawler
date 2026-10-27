@@ -1,0 +1,330 @@
+{
+ "id": "509331",
+ "name": "丘林",
+ "desc": "实习雕刻师但是武道大成",
+ "modules": [
+  {
+   "name": "丘林",
+   "is_poped": false,
+   "components": [
+    {
+     "component_id": "monster_base_info",
+     "layout": "",
+     "data": {
+      "list": [
+       {
+        "tab_name": "风绻雪絮",
+        "image": "https://act-upload.mihoyo.com/wiki-user-upload/2026/08/07/258229537/bcddb7536a58d16df9fbdfb3ece0faf7_60369020063705521.gif"
+       },
+       {
+        "tab_name": "冰萦白霜",
+        "image": "https://act-upload.mihoyo.com/wiki-user-upload/2026/08/07/258229537/4e4ae4123913622f8d5eefdfc2e83203_8844667160442686923.gif"
+       },
+       {
+        "tab_name": "碎剜寒芒",
+        "image": "https://act-upload.mihoyo.com/wiki-user-upload/2026/08/07/258229537/941022df978ce181a489b8c13185a54a_2415571570143890078.gif"
+       },
+       {
+        "tab_name": "晶芽凕花",
+        "image": "https://act-upload.mihoyo.com/wiki-user-upload/2026/08/07/258229537/6eafd4c292c62baff7f55569c69dbe52_3997071037295974711.gif"
+       },
+       {
+        "tab_name": "精雕细裁",
+        "image": "https://act-upload.mihoyo.com/wiki-user-upload/2026/08/07/258229537/5f81344449ab302bcb107b86114db0f7_357699842357029546.gif"
+       },
+       {
+        "tab_name": "星不在焉",
+        "image": "https://act-upload.mihoyo.com/wiki-user-upload/2026/08/07/258229537/059f302d0b518c92fd135ad2e97a40be_2165934747693930544.gif"
+       }
+      ],
+      "attr": [
+       {
+        "key": "元素",
+        "value": [
+         "<p>冰、风</p>"
+        ]
+       },
+       {
+        "key": "攻击方式",
+        "value": [
+         "<p>风绻雪絮、冰萦白霜、碎剜寒芒、晶芽凕花、精雕细裁</p>"
+        ]
+       }
+      ],
+      "feedback": [
+       {
+        "img": "https://act-upload.mihoyo.com/wiki-user-upload/2026/08/06/258229537/f8bacc007a6b264469a5e2b9c142b493_5688441923330873360.png",
+        "nickname": "摩拉",
+        "amount": 100,
+        "link": "/ys/obc/content/5565/detail?bbs_presentation_style=no_header",
+        "updated": true,
+        "status": "Online",
+        "ep_id": 5565
+       },
+       {
+        "img": "https://act-upload.mihoyo.com/wiki-user-upload/2026/08/08/258229537/d378a6ac692b07b8d8840868844b3d1c_3876362033471044616.png",
+        "nickname": "角色经验",
+        "amount": 60,
+        "link": "无",
+        "updated": true,
+        "status": "Online",
+        "ep_id": 508398
+       },
+       {
+        "img": "https://act-upload.mihoyo.com/wiki-user-upload/2026/08/07/258229537/21a4a02d6ed1db4b8663e7867a922cf0_5877899131560623168.png",
+        "nickname": "幻造晶鳞石",
+        "amount": 0,
+        "link": "无",
+        "updated": true,
+        "status": "Online",
+        "ep_id": 508257
+       },
+       {
+        "img": "https://act-upload.mihoyo.com/wiki-user-upload/2026/08/07/258229537/00e545c6b880d358d4d1c0180d955439_6993628792991458550.png",
+        "nickname": "幻造裂晶",
+        "amount": 0,
+        "link": "无",
+        "updated": true,
+        "status": "Online",
+        "ep_id": 856
+       },
+       {
+        "img": "https://act-upload.mihoyo.com/wiki-user-upload/2026/08/07/258229537/27f7c69566a82145dde82cc7bb59bb0f_2261718136302599103.png",
+        "nickname": "幻造萤屑",
+        "amount": 0,
+        "link": "无",
+        "updated": true,
+        "status": "Online",
+        "ep_id": 855
+       }
+      ]
+     },
+     "style": ""
+    }
+   ],
+   "id": "1192",
+   "is_customize_name": true,
+   "is_abstract": false,
+   "is_show_switch": false,
+   "switch": false,
+   "desc": "",
+   "repeated": false,
+   "is_submodule": false,
+   "origin_module_id": "0",
+   "without_border": false,
+   "can_delete": false,
+   "is_hidden": false,
+   "rich_text_editing": false
+  },
+  {
+   "name": "攻略方法",
+   "is_poped": false,
+   "components": [
+    {
+     "component_id": "collapse_panel",
+     "layout": "",
+     "data": {
+      "rich_text": "<p>地方传奇·「丘林」在「豪斗旅纪·II」中亦有辑录，玩家需要达成下列3个挑战目标以领取奖励：</p><ul><li><p><strong>目标1：<span style=\"color: rgb(250, 84, 28)\">战胜</span>「丘林」；</strong></p></li><li><p><strong>目标2：在「丘林」成功雕刻出「巨口霜精」之前，<span style=\"color: rgb(250, 84, 28)\">击败</span>他；</strong></p></li><li><p><strong>目标3：在「丘林」<span style=\"color: rgb(250, 84, 28)\">第三次雕刻出冰雕之前</span>，<span style=\"color: rgb(250, 84, 28)\">击败</span>他；</strong></p></li></ul><p>以上目标需在完成挑战的过程中达成，不分顺序。</p><hr><ul><li><p>召唤师、雕塑师、武斗师集一身的丘林将会使用冰块进行战斗，并雕成各种东西，且对于自己的对手毫不留情，每次都能雕刻出「巨口霜精」，<strong>霜精会朝着玩家方向<span style=\"color: rgb(250, 84, 28)\">发射伤害极高的雪球！</span></strong></p></li><li><p>正常情况下，冰块在<strong>4s</strong>后会成为「巨口霜精」，<strong>「巨口霜精」具有<span style=\"color: rgb(250, 84, 28)\">120单位</span>冻元素</strong>，每个「巨口霜精」存在<strong>40s</strong>，之后自毁消失。</p></li><li><p>在部分区域内，丘林每次雕刻都会使用两枚冰块。</p></li></ul><p><strong><span style=\"color: rgb(89, 126, 247)\">「星烁反应」</span>影响效果如下：</strong></p><ul><li><p><strong>「巨口霜精」<span style=\"color: rgb(250, 84, 28)\">将雕刻失败</span>，</strong>冰块会变成无害的<strong>随机小动物雕像</strong>，<strong>雕像具有<span style=\"color: rgb(250, 84, 28)\">3单位</span>冻元素</strong>，这些雕像存在<strong>12s</strong>后自毁。</p></li></ul><hr><p><strong><span style=\"color: rgb(250, 84, 28)\">幽境危战</span>机制（难5及以上）</strong></p><ul><li><p>常态全抗很高，但没有突出的冰风抗性。</p></li><li><p><strong>入战<span style=\"color: rgb(250, 84, 28)\">8s</span></strong>之后、以及<strong>后续每<span style=\"color: rgb(250, 84, 28)\">16s</span>，</strong>会召唤2个冰块进行雕刻，冰块在<strong>5s</strong>后会变为「巨口霜精」。</p></li><li><p>若在冰雕制作期间受到<strong><span style=\"color: rgb(89, 126, 247)\">「星烁反应」</span></strong><span style=\"color: rgb(51, 51, 51)\">影响，则冰块会</span><strong><span style=\"color: rgb(51, 51, 51)\">自爆，</span><span style=\"color: rgb(250, 84, 28)\">每枚</span><span style=\"color: rgb(51, 51, 51)\">冰块对丘林自己</span><span style=\"color: rgb(250, 84, 28)\">造成等于499999的真实伤害</span></strong><span style=\"color: rgb(51, 51, 51)\">，并为丘林加一层减抗的效果，每层使丘林</span><strong><span style=\"color: rgb(51, 51, 51)\">降低一定的风抗和全抗，</span></strong><span style=\"color: rgb(51, 51, 51)\">该效果最多叠加3层，每层持续</span><strong><span style=\"color: rgb(250, 84, 28)\">30s</span></strong><span style=\"color: rgb(51, 51, 51)\">。</span></p></li><li><p><span style=\"color: rgb(51, 51, 51)\">「碎剜寒芒」技能得到加强，其将呈十字形施放，在一枚冰锥的基础上向四个方向各延伸2枚冰锥，共释放9枚冰锥。</span></p></li><li><p><span style=\"color: rgb(51, 51, 51)\">「风绻雪絮」技能得到加强，其将同时放置3枚冰涡旋，当场上存在其他冰涡旋时才会只放置1枚冰涡旋。</span></p></li><li><p>「巨口霜精」的雪球<strong>伤害<span style=\"color: rgb(250, 84, 28)\">降低</span>。</strong></p></li></ul>",
+      "switch": false,
+      "is_show_switch": false,
+      "without_border": false
+     },
+     "style": ""
+    }
+   ],
+   "id": "1193",
+   "is_customize_name": true,
+   "is_abstract": false,
+   "is_show_switch": false,
+   "switch": false,
+   "desc": "",
+   "repeated": false,
+   "is_submodule": false,
+   "origin_module_id": "0",
+   "without_border": false,
+   "can_delete": false,
+   "is_hidden": false,
+   "rich_text_editing": false
+  },
+  {
+   "name": "背景故事",
+   "is_poped": false,
+   "components": [
+    {
+     "component_id": "good_desc",
+     "layout": "",
+     "data": {
+      "rich_text": "<p>在兽怪雕塑大师布拉金手下刻苦学习臻冰雕塑技艺的矮灵。然而，布拉金的技巧是一种以速度为最优先，追求短时间内完成作品的雕塑手法，所进行的也大多是躯体和手法的训练。理所当然的，日复一日的刻苦并没有令作为学徒的丘林锻炼出什么艺术审美，但是很快，他发现自己变成了学徒中最能打的那个…</p>",
+      "attr": [
+       {
+        "key": "",
+        "value": [
+         "<p></p>"
+        ]
+       }
+      ]
+     },
+     "style": ""
+    }
+   ],
+   "id": "1194",
+   "is_customize_name": true,
+   "is_abstract": false,
+   "is_show_switch": false,
+   "switch": false,
+   "desc": "",
+   "repeated": false,
+   "is_submodule": false,
+   "origin_module_id": "0",
+   "without_border": false,
+   "can_delete": false,
+   "is_hidden": false,
+   "rich_text_editing": false
+  },
+  {
+   "name": "数据参考",
+   "is_poped": false,
+   "components": [
+    {
+     "component_id": "equipment_growth_info",
+     "layout": "",
+     "data": {
+      "list": [
+       {
+        "tab_name": "正常",
+        "attr": [
+         {
+          "value": [
+           "<html><head></head><body><p>世界8(93级)：432.81w<span data-type=\"1\" data-name=\"&lt;p&gt;本数据为实际测算模拟得出，结果可能不准确。&lt;strong&gt;&lt;span style=&#34;color: rgb(250, 140, 22)&#34;&gt;多人情况下的生命值与单人情况下生命值成一定倍数关系，该系数通常是固定的，可直接计算。&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;数据单位：生命值以&lt;strong&gt;&lt;span style=&#34;color: rgb(245, 34, 45)&#34;&gt;w&lt;/span&gt;(万)&lt;/strong&gt;为单位，向下保留两位小数。&lt;/p&gt;\" class=\"wiki-note-text\"><sup class=\"wiki-sup\">[1]</sup></span></p><p>世界9(103级)：633.72w</p></body></html>"
+          ],
+          "key": "生命值"
+         },
+         {
+          "value": [
+           "<html><head></head><body><p><span style=\"color: rgb(191, 191, 191)\">≈</span>104.0×蕈兽<span data-type=\"3\" data-name=\"&lt;p&gt;同级敌人间的生命值通常具有某种倍数联系。&lt;/p&gt;&lt;p&gt;为方便计算，&lt;span style=&#34;color: rgb(0, 0, 0)&#34;&gt;通常以&lt;/span&gt;&lt;strong&gt;&lt;span style=&#34;color: rgb(255, 169, 64)&#34;&gt;丘丘人&lt;/span&gt;&lt;span style=&#34;color: rgb(0, 0, 0)&#34;&gt;、&lt;/span&gt;&lt;span style=&#34;color: rgb(82, 196, 26)&#34;&gt;(小型)蕈兽&lt;/span&gt;&lt;span style=&#34;color: rgb(0, 0, 0)&#34;&gt;、&lt;/span&gt;&lt;span style=&#34;color: rgb(250, 84, 28)&#34;&gt;(水下)巡游机关&lt;/span&gt;&lt;/strong&gt;&lt;span style=&#34;color: rgb(0, 0, 0)&#34;&gt;三个敌人作为衡量生命值的单位&lt;/span&gt;，向下保留两位小数，这种数据就是&lt;strong&gt;&lt;span style=&#34;color: rgb(245, 34, 45)&#34;&gt;相对生命值&lt;/span&gt;。&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;本算法产生的数据准确度高，至多保留两位小数。&lt;/p&gt;\" class=\"wiki-note-text\"><sup class=\"wiki-sup\">[3]</sup></span></p><p><span style=\"color: rgb(191, 191, 191)\">≈</span>25.16×蕈兽<span style=\"color: rgb(64, 64, 64)\">（历经百战）</span></p></body></html>"
+          ],
+          "key": "相对生命值"
+         },
+         {
+          "value": [
+           "<p>冰、风抗<strong>较高。</strong></p>"
+          ],
+          "key": "抗性信息"
+         }
+        ],
+        "materials": []
+       },
+       {
+        "tab_name": "幽境危战·烁煌之役",
+        "attr": [
+         {
+          "value": [
+           "<p>难度3<span style=\"color: rgb(51, 51, 51)\">(90级)：171.43w</span></p><p><span style=\"color: rgb(51, 51, 51)\">难度4(100级)：854.23w</span></p><p><span style=\"color: rgb(51, 51, 51)\">难度5(105级)：1358.13w</span></p><p><span style=\"color: rgb(51, 51, 51)\">难度6(110级)：3270.64w</span></p>"
+          ],
+          "key": "生命值"
+         },
+         {
+          "value": [
+           "<p><span style=\"color: rgb(191, 191, 191)\">≈</span>38.51×蕈兽</p>"
+          ],
+          "key": "相对生命值"
+         },
+         {
+          "value": [
+           "<p>全抗<strong>较高。</strong></p><p>受到来自冰块的伤害时，风抗及全抗<strong>小幅下降</strong>，可叠加3层。</p>"
+          ],
+          "key": "抗性信息"
+         }
+        ],
+        "materials": []
+       }
+      ]
+     },
+     "style": ""
+    }
+   ],
+   "id": "3042",
+   "is_customize_name": true,
+   "is_abstract": false,
+   "is_show_switch": false,
+   "switch": false,
+   "desc": "",
+   "repeated": true,
+   "is_submodule": false,
+   "origin_module_id": "0",
+   "without_border": false,
+   "can_delete": false,
+   "is_hidden": false,
+   "rich_text_editing": false
+  },
+  {
+   "name": "位置导览",
+   "is_poped": false,
+   "components": [
+    {
+     "component_id": "timeline_base_info",
+     "layout": "",
+     "data": {
+      "list": [
+       {
+        "tab_name": "大世界",
+        "attr": [
+         {
+          "key": "路线说明",
+          "value": [
+           "<p>位于<strong><span style=\"color: rgb(0, 0, 0)\">彩冰镇东边的小镇，</span></strong><span style=\"color: rgb(0, 0, 0)\">仅有一个锚点。</span></p><p><strong><span style=\"color: rgb(0, 0, 0)\">须先和旁边的</span><span style=\"color: rgb(250, 84, 28)\">布拉金进行对话</span></strong>，击败前两个兽怪后，丘林才会出现。</p><p><span class=\"custom-image-view\" data-image-url=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/07/258229537/120f55fcea952fb40d19aca8ed888279_6284410753405629450.png\" data-image-border=\"true\" data-image-unit=\"px\" data-image-width=\"640\"><span class=\"custom-image-wrapper\" style=\"width: 640px;\"><span style=\"\"><img class=\"custom-image\" src=\"https://act-upload.mihoyo.com/wiki-user-upload/2026/08/07/258229537/120f55fcea952fb40d19aca8ed888279_6284410753405629450.png\" style=\"border: 1px solid #d3bc8e;;width: 640px;\"></span></span></span></p>"
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     "style": ""
+    }
+   ],
+   "id": "3136",
+   "is_customize_name": true,
+   "is_abstract": false,
+   "is_show_switch": false,
+   "switch": false,
+   "desc": "",
+   "repeated": false,
+   "is_submodule": false,
+   "origin_module_id": "0",
+   "without_border": false,
+   "can_delete": false,
+   "is_hidden": false,
+   "rich_text_editing": false
+  },
+  {
+   "name": "",
+   "is_poped": false,
+   "components": [
+    {
+     "component_id": "collapse_panel",
+     "layout": "",
+     "data": {
+      "rich_text": "<p></p>",
+      "switch": false,
+      "is_show_switch": true,
+      "without_border": false
+     },
+     "style": ""
+    }
+   ],
+   "id": "3156",
+   "is_customize_name": true,
+   "is_abstract": false,
+   "is_show_switch": true,
+   "switch": false,
+   "desc": "",
+   "repeated": false,
+   "is_submodule": false,
+   "origin_module_id": "0",
+   "without_border": false,
+   "can_delete": false,
+   "is_hidden": false,
+   "rich_text_editing": false
+  }
+ ]
+}

@@ -20,12 +20,13 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 if SCRIPT_DIR not in sys.path:
     sys.path.insert(0, SCRIPT_DIR)
 
+from catalogs import CATALOGS, normalize_catalogs            # noqa: E402
 from config import load_config                           # noqa: E402
-from exporter import CATALOGS, Exporter, is_preview, normalize_catalogs  # noqa: E402
+from exporter import Exporter, is_preview                # noqa: E402
 from obc_api import Client                               # noqa: E402
 from progress import Console                             # noqa: E402
 
-VERSION = "0.1.0"
+VERSION = "0.2.0"
 
 
 def build_client(cfg, console=None):
@@ -46,11 +47,35 @@ def build_client(cfg, console=None):
                   proxy=request.get("proxy") or "")
 
 
+def catalogs_from_config(cfg):
+    """``catalogs`` 配置段 → 只保留显式开启的分类。
+
+    段里没出现的分类按「开」处理（没写本段 = 全抓）；显式写 false 的排除。
+    键名写分类名 / 英文键 / 简称都认。
+    """
+    section = cfg.get("catalogs")
+    if not isinstance(section, dict) or not section:
+        return list(CATALOGS)
+    enabled, disabled = [], []
+    for name, flag in section.items():
+        try:
+            keys = [c["key"] for c in normalize_catalogs([name])]
+        except ValueError:
+            continue
+        target = enabled if flag else disabled
+        target.extend(keys)
+    if enabled:
+        return [c for c in CATALOGS if c["key"] in set(enabled)]
+    return [c for c in CATALOGS if c["key"] not in set(disabled)]
+
+
 def main(argv=None):
     parser = argparse.ArgumentParser(
-        description="导出米游社观测枢（原神 WIKI）的角色 / 武器 / 圣遗物图鉴",
+        description="导出米游社观测枢（原神 WIKI）图鉴：角色 / 武器 / 圣遗物 / 敌人 / "
+                    "食物 / 书籍，外加快捷导航里的材料、家具、秘境、成就、名片等频道",
         formatter_class=argparse.RawDescriptionHelpFormatter,
-        epilog="分类别名：角色、武器、圣遗物")
+        epilog="分类别名：" + "、".join(c["name"] for c in CATALOGS[:6]) + " 等，"
+               "详见 README 的分类表")
     parser.add_argument("--out", "-o", help="输出目录，默认取 config.yaml 的 output_dir")
     parser.add_argument("--config", "-c", default="config.yaml", help="配置文件路径")
     parser.add_argument("--only", nargs="*", help="只导出指定分类（空格或逗号分隔）")
@@ -86,6 +111,8 @@ def main(argv=None):
         names = "、".join(c["name"] for c in CATALOGS)
         console(f"可用分类：{names}")
         return 1
+    if not args.only:
+        catalogs = catalogs_from_config(cfg)
     if not catalogs:
         console("没有匹配到分类。")
         return 1
@@ -105,7 +132,7 @@ def main(argv=None):
         bar = console.bar(len(catalogs), label="盘点")
         for index, catalog in enumerate(catalogs, 1):
             cards = client.channel_cards(catalog["channel"], refresh=refresh)
-            previewed = sum(1 for card in cards if is_preview(card))
+            previewed = sum(1 for card in cards if is_preview(card, catalog))
             count = min(len(cards), limit) if limit else len(cards) - previewed
             total += count
             preview_note = f"，其中未上线 {previewed} 条不导出" if previewed else ""

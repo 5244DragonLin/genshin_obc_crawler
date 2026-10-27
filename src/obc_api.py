@@ -279,3 +279,18 @@ class Client:
             if tag.startswith(prefix + "/"):
                 return tag[len(prefix) + 1:].strip() or None
         return None
+
+    @staticmethod
+    def card_filter_all(card, prefix):
+        """取某个前缀的全部标签值，按出现顺序去重。
+
+        一个词条可能挂多个同类标签：敌人常有两种元素（``元素/冰``、
+        ``元素/风``），食物可能同时是「攻击类」与「暴击类」。
+        """
+        values = []
+        for tag in Client.card_filters(card):
+            if tag.startswith(prefix + "/"):
+                value = tag[len(prefix) + 1:].strip()
+                if value and value not in values:
+                    values.append(value)
+        return values

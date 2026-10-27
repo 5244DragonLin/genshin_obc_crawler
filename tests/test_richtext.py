@@ -8,7 +8,8 @@ import unittest
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "src"))
 
-from richtext import clean_html, clean_values, extract_entries, extract_images, html_to_text
+from richtext import (clean_html, clean_values, extract_entries, extract_images,
+                      extract_notes, html_to_text)
 
 
 class TestHtmlToText(unittest.TestCase):
@@ -54,6 +55,31 @@ class TestExtractEntries(unittest.TestCase):
 
     def test_text_without_entries(self):
         self.assertEqual(extract_entries("<p>普通文本</p>"), [])
+
+    def test_amount_becomes_count(self):
+        # 材料条目带数量（data-entry-amount）时补一个 count
+        html = ('<p><span class="custom-entry-wrapper" data-entry-id="756" '
+                'data-entry-name="琉璃百合" data-entry-amount="2"><a>琉璃百合</a></span>'
+                '，<span class="custom-entry-wrapper" data-entry-id="777" '
+                'data-entry-name="糖"><a>糖</a></span></p>')
+        entries = extract_entries(html)
+        self.assertEqual(entries[0]["count"], 2)
+        self.assertNotIn("count", entries[1])
+
+
+class TestExtractNotes(unittest.TestCase):
+    def test_footnote(self):
+        # 正文只留 [1] 标记，注释正文在 span 的 data-name 里（值为转义过的 HTML）
+        html = ('<p>世界8(93级)：112.36w<span data-type="1" '
+                'data-name="&lt;p&gt;数据为实测，单位以&lt;strong&gt;w&lt;/strong&gt;计。&lt;/p&gt;" '
+                'class="wiki-note-text"><sup class="wiki-sup">[1]</sup></span></p>')
+        self.assertEqual(html_to_text(html), "世界8(93级)：112.36w[1]")
+        notes = extract_notes(html)
+        self.assertEqual(notes["1"], "数据为实测，单位以w计。")
+
+    def test_no_notes(self):
+        self.assertEqual(extract_notes("<p>普通文本</p>"), {})
+        self.assertEqual(extract_notes(None), {})
 
 
 class TestExtractImages(unittest.TestCase):

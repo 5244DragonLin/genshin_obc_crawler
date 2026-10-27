@@ -2,10 +2,34 @@
 # 复制本文件为 config.yaml 并按需修改；本文件提交到仓库，不含任何真实凭据
 
 # 抓哪几类图鉴（键名写分类名、英文键或简称都认；不写本段 = 全抓）
+# 前六类是信息来源最丰富的图鉴，各有专用建模；其余是观测枢「快捷导航」上的频道
 catalogs:
   角色图鉴: true
   武器图鉴: true
   圣遗物图鉴: true
+  敌人图鉴: true
+  食物图鉴: true
+  书籍图鉴: true
+  灰眸图鉴: false
+  组织图鉴: false
+  头像图鉴: false
+  材料图鉴: false
+  家具图鉴: false
+  秘境图鉴: false
+  NPC与商店图鉴: false
+  成就图鉴: false
+  活动图鉴: false
+  任务图鉴: false
+  动物图鉴: false
+  深境螺旋图鉴: false
+  幻想真境剧诗图鉴: false
+  幽境危战图鉴: false
+  冒险家协会图鉴: false
+  名片图鉴: false
+  考据图鉴: false
+  千星奇域图鉴: false
+  卡牌图鉴: false
+  影音回廊图鉴: false
 
 # 输出目录，相对路径以项目根目录为基准
 output_dir: output

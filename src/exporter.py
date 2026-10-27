@@ -1,13 +1,21 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""分类定义、抓取编排、封面下载与落盘。
+"""抓取编排、封面下载与落盘。
 
-三类图鉴各自对应观测枢的一个频道（channel_id），列表接口一次取全，
-词条正文逐条从 hoyowiki 新平台接口获取。标题带「预告」的未上线词条
-（如「米提亚【预告】」，正文全是「待更新」占位）直接跳过不导出。产物结构：
+每个图鉴对应观测枢的一个频道（channel_id），列表接口一次取全，词条正文
+逐条从 hoyowiki 新平台接口获取。分类定义见 :mod:`catalogs`：
+
+- 前六类图鉴（角色 / 武器 / 圣遗物 / 敌人 / 食物 / 书籍）走专用建模器；
+- 快捷导航里其余频道走 :mod:`generic_model` 的通用建模；
+- 千星奇域 / 卡牌图鉴 / 影音回廊是聚合频道，一个频道收多个子频道的卡片，
+  记录里的 ``channel`` 标明来路。
+
+标题带「预告」的未上线词条（如「米提亚【预告】」，正文全是「待更新」占位）
+直接跳过不导出；影音类频道的「角色预告 PV」是正经片名，按分类定义里的
+``previews: False`` 关掉这条规则。产物结构：
 
 - ``角色图鉴.json`` + ``旅行者/<角色>.md``（每人一篇，附 ``index.md``）
-- ``武器图鉴.json`` / ``圣遗物图鉴.json``
+- ``<分类名>.json`` 每类一个
 - ``assets/<分类>/`` 封面与组件图片
 - ``manifest.json`` / ``changes.json`` / ``.state.json``
 """
@@ -21,32 +29,16 @@ import urllib.parse
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor
 
-import artifact_model
 import character_md
 import character_model
-import weapon_model
-from obc_api import PREVIEW_MARK, Client, get_opener
+import generic_model
+# 分类定义搬到了 catalogs.py，这里保留导出路径兼容旧代码
+from catalogs import CATALOGS, normalize_catalogs       # noqa: F401
+from obc_api import PREVIEW_MARK, Client, deep_parse, get_opener
 from state import Changes, fingerprint, load_old_records, write_manifest
 
 UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/120.0 Safari/537.36")
-
-# 观测枢频道 id（api-static 列表接口的 channel_id）
-CATALOGS = [
-    {"key": "character", "name": "角色图鉴", "channel": 25,
-     "model": character_model, "md": True},
-    {"key": "weapon", "name": "武器图鉴", "channel": 5,
-     "model": weapon_model, "md": False},
-    {"key": "artifact", "name": "圣遗物图鉴", "channel": 218,
-     "model": artifact_model, "md": False},
-]
-
-# ``--only`` / 配置里的分类别名
-_ALIASES = {
-    "character": "character", "角色": "character", "角色图鉴": "character",
-    "weapon": "weapon", "武器": "weapon", "武器图鉴": "weapon",
-    "artifact": "artifact", "圣遗物": "artifact", "圣遗物图鉴": "artifact",
-}
 
 _MD_DIR = "旅行者"          # 角色 Markdown 目录
 _ART_DIR = "立绘"           # 角色立绘子目录（相对 assets/character）
@@ -55,27 +47,15 @@ _ART_DIR = "立绘"           # 角色立绘子目录（相对 assets/character�
 _SKIP_PREVIEWS = True
 
 
-def is_preview(card):
-    """未上线词条：标题带「预告」标记（米提亚【预告】、瓦列里【预告】）。"""
+def is_preview(card, catalog=None):
+    """未上线词条：标题带「预告」标记（米提亚【预告】、瓦列里【预告】）。
+
+    影音类频道（``previews: False``）标题里的「角色预告 PV」是正经片名，
+    不能当占位跳过。
+    """
+    if catalog is not None and not catalog.get("previews", True):
+        return False
     return _SKIP_PREVIEWS and PREVIEW_MARK in Client.card_name(card)
-
-
-def normalize_catalogs(only):
-    """``--only`` 别名列表 → CATALOGS 子集；空列表 = 全部。"""
-    if not only:
-        return list(CATALOGS)
-    wanted = []
-    for token in only:
-        for part in re.split(r"[,，\s]+", str(token)):
-            if not part:
-                continue
-            key = _ALIASES.get(part.lower().strip())
-            if key is None:
-                raise ValueError(f"未知分类：{part}")
-            if key not in wanted:
-                wanted.append(key)
-    # 输出顺序固定为内置顺序，不跟随命令行顺序
-    return [c for c in CATALOGS if c["key"] in wanted]
 
 
 def _safe_name(name):
@@ -87,6 +67,27 @@ def _url_ext(url):
     """图片地址的后缀名，认不出时按 .png 处理。"""
     ext = os.path.splitext(urllib.parse.urlparse(str(url or "")).path)[1].lower()
     return ext if ext in (".png", ".jpg", ".jpeg", ".webp") else ".png"
+
+
+def _subchannel(card, subchannels):
+    """聚合频道里卡片属于哪个子频道：``ext`` 的 ``c_<id>`` 键即子频道 id。
+
+    这是快路径；少数卡片 ``ext`` 为空（站点没写筛选标签），由
+    :meth:`Exporter._subchannel_index` 按子频道列表补齐。
+    """
+    if not subchannels:
+        return None
+    ext = deep_parse((card or {}).get("ext"))
+    if not isinstance(ext, dict):
+        return None
+    for key in ext:
+        match = re.fullmatch(r"c_(\d+)", str(key))
+        if not match:
+            continue
+        name = subchannels.get(int(match.group(1)))
+        if name:
+            return name
+    return None
 
 
 def _image_paths(record):
@@ -153,6 +154,7 @@ class Exporter:
         self._cover_urls = {}               # catalog_key -> {id: 远程头像地址}
         self._art_urls = {}                 # catalog_key -> {id: 远程立绘地址}
         self._cover_lock = threading.Lock()  # 图片台账在多线程里登记，加锁保护
+        self._sub_index = {}                # 聚合频道：词条 id -> 子频道名
         self._load_state()
 
     # ------------------------------------------------------------------
@@ -219,13 +221,37 @@ class Exporter:
                 return relative, None
             return None, f"    立绘下载失败：{record.get('name')}"
 
-        if not record.get("icon"):
+        # 通用分类里，秘境 / 家具 / 名片这类把主图放在 image
+        source = record.get("icon") or record.get("image")
+        if not source:
             return None, None
         relative = os.path.join("assets", key, f"{stem}.png")
-        if self._fetch_image(key, entry_id, record["icon"], relative,
+        if self._fetch_image(key, entry_id, source, relative,
                              self._cover_urls):
             return relative, None
         return None, f"    封面下载失败：{record.get('name')}"
+
+    # ------------------------------------------------------------------
+    def _subchannel_index(self, catalog):
+        """聚合频道的「词条 id → 子频道名」索引。
+
+        卡片 ``ext`` 里的 ``c_<子频道id>`` 只覆盖挂了筛选标签的卡片：千星奇域
+        有 12 条、影音回廊有 5 条站点没写标签（如「旅行者语音展示」「WIKI
+        编辑教程」），``ext`` 是空的。这里逐个子频道取一遍列表补齐，
+        每个子频道一次请求，代价远小于逐条词条。
+        """
+        subchannels = catalog.get("subchannels")
+        if not subchannels:
+            return {}
+        index = {}
+        for channel_id, name in sorted(subchannels.items()):
+            try:
+                cards = self.client.channel_cards(channel_id, refresh=self.refresh)
+            except Exception:
+                continue
+            for card in cards:
+                index[self.client.card_id(card)] = name
+        return index
 
     # ------------------------------------------------------------------
     def _build(self, catalog, card):
@@ -237,8 +263,15 @@ class Exporter:
         entry_id = self.client.card_id(card)
         try:
             page = self.client.entry_page(entry_id, refresh=self.refresh)
-            # 只有角色模型接受 voice_languages，武器/圣遗物模型是 build(card, page)
-            if catalog["key"] == "character":
+            if catalog.get("generic"):
+                record = generic_model.build(card, page, catalog)
+                # 聚合频道：卡片 ext 里的 c_<子频道id> 指明来路，记进 channel
+                sub = (_subchannel(card, catalog.get("subchannels"))
+                       or self._sub_index.get(entry_id))
+                if sub:
+                    record["channel"] = sub
+            elif catalog["key"] == "character":
+                # 只有角色模型接受 voice_languages，其余模型是 build(card, page)
                 record = catalog["model"].build(card, page,
                                                 voice_languages=self.voice_languages)
             else:
@@ -268,13 +301,16 @@ class Exporter:
         cards = self.client.channel_cards(catalog["channel"], refresh=self.refresh)
         old_records = load_old_records(self.out_root, catalog)
         old_by_id = dict(old_records)
+        # 聚合频道先把子频道归属索引建好，建模线程里直接查
+        self._sub_index = self._subchannel_index(catalog)
 
         # 未上线词条（标题带「预告」）不导出：正文全是「待更新」占位，
         # 之前抓进去的旧记录因此对不上，会按「移除」清掉 JSON 与 Markdown
-        skipped = [Client.card_name(card) for card in cards if is_preview(card)]
+        skipped = [Client.card_name(card) for card in cards
+                   if is_preview(card, catalog)]
         if skipped:
             self.console(f"  跳过未上线词条 {len(skipped)} 条：{'、'.join(skipped)}")
-        cards = [card for card in cards if not is_preview(card)]
+        cards = [card for card in cards if not is_preview(card, catalog)]
 
         records, errors = [], []
         added = updated = removed = unchanged = 0

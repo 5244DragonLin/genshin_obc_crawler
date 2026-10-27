@@ -111,13 +111,15 @@ def tables(data):
     return out
 
 
-def materials(data):
+def materials(data, field="materials"):
     """材料列表 ``[{ep_id, amount, nickname, img, link}]`` → 规整条目。
 
     ``ep_id`` 就是该材料词条的 content_id，可直接用于跳转与关联。
+    ``field`` 指定取哪个字段：角色突破、武器成长、食物配方都是
+    ``materials``，敌人的掉落物用 ``feedback``（同一种条目形态）。
     """
     out = []
-    for item in (data or {}).get("materials") or []:
+    for item in (data or {}).get(field) or []:
         if not isinstance(item, dict):
             continue
         name = str(item.get("nickname") or "").strip()

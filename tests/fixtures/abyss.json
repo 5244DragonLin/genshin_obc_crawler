@@ -1,0 +1,81 @@
+{
+ "name": "深境螺旋第8层",
+ "modules": [
+  {
+   "name": "目标",
+   "components": [
+    {
+     "component_id": "spiral_abyss_target",
+     "data": {
+      "list": [
+       {
+        "level": "8-1",
+        "target": "挑战剩余时间大于180秒\n挑战剩余时间大于330秒\n挑战剩余时间大于420秒",
+        "desc": "敌人等级：lv70",
+        "first_half": {
+         "list": [
+          {
+           "name": "第一轮",
+           "entry_pages": [
+            {
+             "ep_id": 154,
+             "amount": 1,
+             "nickname": "冰深渊法师",
+             "img": "https://uploadstatic.mihoyo.com/ys-obc/2023/01/18/73961553/ebaac83a3457825834fcc3525de14c66_7877977277093983254.png"
+            },
+            {
+             "ep_id": 153,
+             "amount": 1,
+             "nickname": "水深渊法师",
+             "img": "https://uploadstatic.mihoyo.com/ys-obc/2023/01/18/73961553/6ac140710892d0150f46cfff38c1b3de_4490692094548405813.png"
+            }
+           ]
+          }
+         ]
+        },
+        "second_half": {
+         "list": [
+          {
+           "name": "第一轮",
+           "entry_pages": [
+            {
+             "ep_id": 155,
+             "amount": 2,
+             "nickname": "火深渊法师",
+             "img": "https://uploadstatic.mihoyo.com/ys-obc/2023/01/18/73961553/1771d3890717d40f6d644e89a782ac89_6662628813505540107.png"
+            }
+           ]
+          }
+         ]
+        }
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "地脉异常",
+   "components": [
+    {
+     "component_id": "multi_table",
+     "data": {
+      "tables": [
+       {
+        "tab_name": "地脉异常",
+        "header": [
+         "效果"
+        ],
+        "row": [
+         [
+          "<p><span style=\"color: rgb(51, 51, 51)\">生命值低于60%时，攻击力提升50%，防御力提升50%。</span></p>"
+         ]
+        ]
+       }
+      ]
+     }
+    }
+   ]
+  }
+ ]
+}
